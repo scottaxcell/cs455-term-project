@@ -1,0 +1,429 @@
+Launch Command: "/usr/local/jdk1.8.0_51/bin/java" "-cp" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/conf/:/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/jars/*:/s/chopin/a/grad/sgaxcell/cs455TermProject/conf/" "-Xmx1024M" "-Dspark.submit.deployMode=cluster" "-Dspark.jars=file:/s/chopin/a/grad/sgaxcell/cs455TermProject/build/libs/cs455TermProject.jar" "-Dspark.app.name=WordCount" "-Dspark.driver.supervise=true" "-Dspark.rpc.askTimeout=10s" "-Dspark.master=spark://phoenix:30311" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@129.82.44.151:46373" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/work/driver-20190413132136-0000/cs455TermProject.jar" "WordCount"
+========================================
+
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/04/13 13:21:37 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:21:37 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:21:37 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:21:37 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:21:37 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:21:38 INFO Utils: Successfully started service 'Driver' on port 41193.
+19/04/13 13:21:38 INFO DriverWrapper: Driver address: 129.82.44.151:41193
+19/04/13 13:21:38 INFO WorkerWatcher: Connecting to worker spark://Worker@129.82.44.151:46373
+19/04/13 13:21:38 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:21:38 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:21:38 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:21:38 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:21:38 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:21:38 INFO TransportClientFactory: Successfully created connection to /129.82.44.151:46373 after 44 ms (0 ms spent in bootstraps)
+19/04/13 13:21:38 INFO WorkerWatcher: Successfully connected to spark://Worker@129.82.44.151:46373
+Exception in thread "main" java.lang.ClassNotFoundException: WordCount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:238)
+	at org.apache.spark.deploy.worker.DriverWrapper$.main(DriverWrapper.scala:63)
+	at org.apache.spark.deploy.worker.DriverWrapper.main(DriverWrapper.scala)
+19/04/13 13:21:38 INFO ShutdownHookManager: Shutdown hook called
+19/04/13 13:21:38 INFO ShutdownHookManager: Deleting directory /tmp/spark-35064524-f072-4541-83af-4ebaceb6e21f
+Launch Command: "/usr/local/jdk1.8.0_51/bin/java" "-cp" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/conf/:/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/jars/*:/s/chopin/a/grad/sgaxcell/cs455TermProject/conf/" "-Xmx1024M" "-Dspark.submit.deployMode=cluster" "-Dspark.jars=file:/s/chopin/a/grad/sgaxcell/cs455TermProject/build/libs/cs455TermProject.jar" "-Dspark.app.name=WordCount" "-Dspark.driver.supervise=true" "-Dspark.rpc.askTimeout=10s" "-Dspark.master=spark://phoenix:30311" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@129.82.44.151:46373" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/work/driver-20190413132136-0000/cs455TermProject.jar" "WordCount"
+========================================
+
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/04/13 13:21:41 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:21:41 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:21:41 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:21:41 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:21:41 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:21:41 INFO Utils: Successfully started service 'Driver' on port 42969.
+19/04/13 13:21:41 INFO DriverWrapper: Driver address: 129.82.44.151:42969
+19/04/13 13:21:41 INFO WorkerWatcher: Connecting to worker spark://Worker@129.82.44.151:46373
+19/04/13 13:21:41 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:21:41 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:21:41 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:21:41 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:21:41 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:21:41 INFO TransportClientFactory: Successfully created connection to /129.82.44.151:46373 after 49 ms (0 ms spent in bootstraps)
+19/04/13 13:21:41 INFO WorkerWatcher: Successfully connected to spark://Worker@129.82.44.151:46373
+Exception in thread "main" java.lang.ClassNotFoundException: WordCount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:238)
+	at org.apache.spark.deploy.worker.DriverWrapper$.main(DriverWrapper.scala:63)
+	at org.apache.spark.deploy.worker.DriverWrapper.main(DriverWrapper.scala)
+19/04/13 13:21:42 INFO ShutdownHookManager: Shutdown hook called
+19/04/13 13:21:42 INFO ShutdownHookManager: Deleting directory /tmp/spark-5adc9bf1-6f19-4e4f-aef1-d4f968e62c0d
+Launch Command: "/usr/local/jdk1.8.0_51/bin/java" "-cp" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/conf/:/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/jars/*:/s/chopin/a/grad/sgaxcell/cs455TermProject/conf/" "-Xmx1024M" "-Dspark.submit.deployMode=cluster" "-Dspark.jars=file:/s/chopin/a/grad/sgaxcell/cs455TermProject/build/libs/cs455TermProject.jar" "-Dspark.app.name=WordCount" "-Dspark.driver.supervise=true" "-Dspark.rpc.askTimeout=10s" "-Dspark.master=spark://phoenix:30311" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@129.82.44.151:46373" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/work/driver-20190413132136-0000/cs455TermProject.jar" "WordCount"
+========================================
+
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/04/13 13:21:45 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:21:45 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:21:45 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:21:45 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:21:45 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:21:46 INFO Utils: Successfully started service 'Driver' on port 38105.
+19/04/13 13:21:46 INFO DriverWrapper: Driver address: 129.82.44.151:38105
+19/04/13 13:21:46 INFO WorkerWatcher: Connecting to worker spark://Worker@129.82.44.151:46373
+19/04/13 13:21:46 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:21:46 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:21:46 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:21:46 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:21:46 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:21:46 INFO TransportClientFactory: Successfully created connection to /129.82.44.151:46373 after 41 ms (0 ms spent in bootstraps)
+19/04/13 13:21:46 INFO WorkerWatcher: Successfully connected to spark://Worker@129.82.44.151:46373
+Exception in thread "main" java.lang.ClassNotFoundException: WordCount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:238)
+	at org.apache.spark.deploy.worker.DriverWrapper$.main(DriverWrapper.scala:63)
+	at org.apache.spark.deploy.worker.DriverWrapper.main(DriverWrapper.scala)
+19/04/13 13:21:46 INFO ShutdownHookManager: Shutdown hook called
+19/04/13 13:21:46 INFO ShutdownHookManager: Deleting directory /tmp/spark-71ab1220-8667-46e5-84a6-34846625aedc
+Launch Command: "/usr/local/jdk1.8.0_51/bin/java" "-cp" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/conf/:/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/jars/*:/s/chopin/a/grad/sgaxcell/cs455TermProject/conf/" "-Xmx1024M" "-Dspark.submit.deployMode=cluster" "-Dspark.jars=file:/s/chopin/a/grad/sgaxcell/cs455TermProject/build/libs/cs455TermProject.jar" "-Dspark.app.name=WordCount" "-Dspark.driver.supervise=true" "-Dspark.rpc.askTimeout=10s" "-Dspark.master=spark://phoenix:30311" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@129.82.44.151:46373" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/work/driver-20190413132136-0000/cs455TermProject.jar" "WordCount"
+========================================
+
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/04/13 13:21:52 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:21:52 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:21:52 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:21:52 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:21:52 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:21:52 INFO Utils: Successfully started service 'Driver' on port 35071.
+19/04/13 13:21:52 INFO DriverWrapper: Driver address: 129.82.44.151:35071
+19/04/13 13:21:52 INFO WorkerWatcher: Connecting to worker spark://Worker@129.82.44.151:46373
+19/04/13 13:21:52 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:21:52 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:21:52 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:21:52 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:21:52 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:21:52 INFO TransportClientFactory: Successfully created connection to /129.82.44.151:46373 after 49 ms (0 ms spent in bootstraps)
+19/04/13 13:21:52 INFO WorkerWatcher: Successfully connected to spark://Worker@129.82.44.151:46373
+Exception in thread "main" java.lang.ClassNotFoundException: WordCount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:238)
+	at org.apache.spark.deploy.worker.DriverWrapper$.main(DriverWrapper.scala:63)
+	at org.apache.spark.deploy.worker.DriverWrapper.main(DriverWrapper.scala)
+19/04/13 13:21:53 INFO ShutdownHookManager: Shutdown hook called
+19/04/13 13:21:53 INFO ShutdownHookManager: Deleting directory /tmp/spark-9417e4bd-8f1e-4a11-b488-b0dbc0bb2f3f
+Launch Command: "/usr/local/jdk1.8.0_51/bin/java" "-cp" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/conf/:/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/jars/*:/s/chopin/a/grad/sgaxcell/cs455TermProject/conf/" "-Xmx1024M" "-Dspark.submit.deployMode=cluster" "-Dspark.jars=file:/s/chopin/a/grad/sgaxcell/cs455TermProject/build/libs/cs455TermProject.jar" "-Dspark.app.name=WordCount" "-Dspark.driver.supervise=true" "-Dspark.rpc.askTimeout=10s" "-Dspark.master=spark://phoenix:30311" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@129.82.44.151:46373" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/work/driver-20190413132136-0000/cs455TermProject.jar" "WordCount"
+========================================
+
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/04/13 13:22:02 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:22:02 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:22:02 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:22:02 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:22:02 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:22:03 INFO Utils: Successfully started service 'Driver' on port 35537.
+19/04/13 13:22:03 INFO DriverWrapper: Driver address: 129.82.44.151:35537
+19/04/13 13:22:03 INFO WorkerWatcher: Connecting to worker spark://Worker@129.82.44.151:46373
+19/04/13 13:22:03 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:22:03 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:22:03 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:22:03 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:22:03 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:22:03 INFO TransportClientFactory: Successfully created connection to /129.82.44.151:46373 after 43 ms (0 ms spent in bootstraps)
+19/04/13 13:22:03 INFO WorkerWatcher: Successfully connected to spark://Worker@129.82.44.151:46373
+Exception in thread "main" java.lang.ClassNotFoundException: WordCount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:238)
+	at org.apache.spark.deploy.worker.DriverWrapper$.main(DriverWrapper.scala:63)
+	at org.apache.spark.deploy.worker.DriverWrapper.main(DriverWrapper.scala)
+19/04/13 13:22:03 INFO ShutdownHookManager: Shutdown hook called
+19/04/13 13:22:03 INFO ShutdownHookManager: Deleting directory /tmp/spark-f03cb9e3-ac9e-4ca4-89a6-bf32b4279661
+Launch Command: "/usr/local/jdk1.8.0_51/bin/java" "-cp" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/conf/:/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/jars/*:/s/chopin/a/grad/sgaxcell/cs455TermProject/conf/" "-Xmx1024M" "-Dspark.submit.deployMode=cluster" "-Dspark.jars=file:/s/chopin/a/grad/sgaxcell/cs455TermProject/build/libs/cs455TermProject.jar" "-Dspark.app.name=WordCount" "-Dspark.driver.supervise=true" "-Dspark.rpc.askTimeout=10s" "-Dspark.master=spark://phoenix:30311" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@129.82.44.151:46373" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/work/driver-20190413132136-0000/cs455TermProject.jar" "WordCount"
+========================================
+
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/04/13 13:22:21 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:22:21 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:22:21 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:22:21 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:22:21 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:22:21 INFO Utils: Successfully started service 'Driver' on port 44941.
+19/04/13 13:22:21 INFO DriverWrapper: Driver address: 129.82.44.151:44941
+19/04/13 13:22:21 INFO WorkerWatcher: Connecting to worker spark://Worker@129.82.44.151:46373
+19/04/13 13:22:21 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:22:21 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:22:21 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:22:21 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:22:21 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:22:21 INFO TransportClientFactory: Successfully created connection to /129.82.44.151:46373 after 42 ms (0 ms spent in bootstraps)
+19/04/13 13:22:21 INFO WorkerWatcher: Successfully connected to spark://Worker@129.82.44.151:46373
+Exception in thread "main" java.lang.ClassNotFoundException: WordCount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:238)
+	at org.apache.spark.deploy.worker.DriverWrapper$.main(DriverWrapper.scala:63)
+	at org.apache.spark.deploy.worker.DriverWrapper.main(DriverWrapper.scala)
+19/04/13 13:22:22 INFO ShutdownHookManager: Shutdown hook called
+19/04/13 13:22:22 INFO ShutdownHookManager: Deleting directory /tmp/spark-6b6c2485-5fba-404b-baf3-2de620468754
+Launch Command: "/usr/local/jdk1.8.0_51/bin/java" "-cp" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/conf/:/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/jars/*:/s/chopin/a/grad/sgaxcell/cs455TermProject/conf/" "-Xmx1024M" "-Dspark.submit.deployMode=cluster" "-Dspark.jars=file:/s/chopin/a/grad/sgaxcell/cs455TermProject/build/libs/cs455TermProject.jar" "-Dspark.app.name=WordCount" "-Dspark.driver.supervise=true" "-Dspark.rpc.askTimeout=10s" "-Dspark.master=spark://phoenix:30311" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@129.82.44.151:46373" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/work/driver-20190413132136-0000/cs455TermProject.jar" "WordCount"
+========================================
+
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/04/13 13:22:55 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:22:55 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:22:55 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:22:55 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:22:55 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:22:56 INFO Utils: Successfully started service 'Driver' on port 43029.
+19/04/13 13:22:56 INFO DriverWrapper: Driver address: 129.82.44.151:43029
+19/04/13 13:22:56 INFO WorkerWatcher: Connecting to worker spark://Worker@129.82.44.151:46373
+19/04/13 13:22:56 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:22:56 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:22:56 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:22:56 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:22:56 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:22:56 INFO TransportClientFactory: Successfully created connection to /129.82.44.151:46373 after 44 ms (0 ms spent in bootstraps)
+19/04/13 13:22:56 INFO WorkerWatcher: Successfully connected to spark://Worker@129.82.44.151:46373
+Exception in thread "main" java.lang.ClassNotFoundException: WordCount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:238)
+	at org.apache.spark.deploy.worker.DriverWrapper$.main(DriverWrapper.scala:63)
+	at org.apache.spark.deploy.worker.DriverWrapper.main(DriverWrapper.scala)
+19/04/13 13:22:56 INFO ShutdownHookManager: Shutdown hook called
+19/04/13 13:22:56 INFO ShutdownHookManager: Deleting directory /tmp/spark-aabcc956-6454-495c-8f5d-d1f92058ebbf
+Launch Command: "/usr/local/jdk1.8.0_51/bin/java" "-cp" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/conf/:/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/jars/*:/s/chopin/a/grad/sgaxcell/cs455TermProject/conf/" "-Xmx1024M" "-Dspark.submit.deployMode=cluster" "-Dspark.jars=file:/s/chopin/a/grad/sgaxcell/cs455TermProject/build/libs/cs455TermProject.jar" "-Dspark.app.name=WordCount" "-Dspark.driver.supervise=true" "-Dspark.rpc.askTimeout=10s" "-Dspark.master=spark://phoenix:30311" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@129.82.44.151:46373" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/work/driver-20190413132136-0000/cs455TermProject.jar" "WordCount"
+========================================
+
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/04/13 13:24:02 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:24:02 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:24:02 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:24:02 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:24:02 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:24:02 INFO Utils: Successfully started service 'Driver' on port 46053.
+19/04/13 13:24:02 INFO DriverWrapper: Driver address: 129.82.44.151:46053
+19/04/13 13:24:02 INFO WorkerWatcher: Connecting to worker spark://Worker@129.82.44.151:46373
+19/04/13 13:24:02 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:24:02 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:24:02 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:24:02 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:24:02 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:24:02 INFO TransportClientFactory: Successfully created connection to /129.82.44.151:46373 after 43 ms (0 ms spent in bootstraps)
+19/04/13 13:24:02 INFO WorkerWatcher: Successfully connected to spark://Worker@129.82.44.151:46373
+Exception in thread "main" java.lang.ClassNotFoundException: WordCount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:238)
+	at org.apache.spark.deploy.worker.DriverWrapper$.main(DriverWrapper.scala:63)
+	at org.apache.spark.deploy.worker.DriverWrapper.main(DriverWrapper.scala)
+19/04/13 13:24:03 INFO ShutdownHookManager: Shutdown hook called
+19/04/13 13:24:03 INFO ShutdownHookManager: Deleting directory /tmp/spark-64ccfe5e-88c4-4cc3-a461-755f4d7a7813
+Launch Command: "/usr/local/jdk1.8.0_51/bin/java" "-cp" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/conf/:/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/jars/*:/s/chopin/a/grad/sgaxcell/cs455TermProject/conf/" "-Xmx1024M" "-Dspark.submit.deployMode=cluster" "-Dspark.jars=file:/s/chopin/a/grad/sgaxcell/cs455TermProject/build/libs/cs455TermProject.jar" "-Dspark.app.name=WordCount" "-Dspark.driver.supervise=true" "-Dspark.rpc.askTimeout=10s" "-Dspark.master=spark://phoenix:30311" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@129.82.44.151:46373" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/work/driver-20190413132136-0000/cs455TermProject.jar" "WordCount"
+========================================
+
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/04/13 13:26:13 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:26:13 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:26:13 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:26:13 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:26:13 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:26:13 INFO Utils: Successfully started service 'Driver' on port 38433.
+19/04/13 13:26:13 INFO DriverWrapper: Driver address: 129.82.44.151:38433
+19/04/13 13:26:13 INFO WorkerWatcher: Connecting to worker spark://Worker@129.82.44.151:46373
+19/04/13 13:26:13 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:26:13 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:26:13 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:26:13 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:26:13 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:26:13 INFO TransportClientFactory: Successfully created connection to /129.82.44.151:46373 after 43 ms (0 ms spent in bootstraps)
+19/04/13 13:26:13 INFO WorkerWatcher: Successfully connected to spark://Worker@129.82.44.151:46373
+Exception in thread "main" java.lang.ClassNotFoundException: WordCount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:238)
+	at org.apache.spark.deploy.worker.DriverWrapper$.main(DriverWrapper.scala:63)
+	at org.apache.spark.deploy.worker.DriverWrapper.main(DriverWrapper.scala)
+19/04/13 13:26:13 INFO ShutdownHookManager: Shutdown hook called
+19/04/13 13:26:13 INFO ShutdownHookManager: Deleting directory /tmp/spark-95dac8f8-d80b-419c-b579-a5f251736ed2
+Launch Command: "/usr/local/jdk1.8.0_51/bin/java" "-cp" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/conf/:/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/jars/*:/s/chopin/a/grad/sgaxcell/cs455TermProject/conf/" "-Xmx1024M" "-Dspark.submit.deployMode=cluster" "-Dspark.jars=file:/s/chopin/a/grad/sgaxcell/cs455TermProject/build/libs/cs455TermProject.jar" "-Dspark.app.name=WordCount" "-Dspark.driver.supervise=true" "-Dspark.rpc.askTimeout=10s" "-Dspark.master=spark://phoenix:30311" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@129.82.44.151:46373" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/work/driver-20190413132136-0000/cs455TermProject.jar" "WordCount"
+========================================
+
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/04/13 13:30:31 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:30:31 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:30:31 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:30:31 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:30:31 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:30:32 INFO Utils: Successfully started service 'Driver' on port 34463.
+19/04/13 13:30:32 INFO DriverWrapper: Driver address: 129.82.44.151:34463
+19/04/13 13:30:32 INFO WorkerWatcher: Connecting to worker spark://Worker@129.82.44.151:46373
+19/04/13 13:30:32 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:30:32 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:30:32 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:30:32 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:30:32 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:30:32 INFO TransportClientFactory: Successfully created connection to /129.82.44.151:46373 after 45 ms (0 ms spent in bootstraps)
+19/04/13 13:30:32 INFO WorkerWatcher: Successfully connected to spark://Worker@129.82.44.151:46373
+Exception in thread "main" java.lang.ClassNotFoundException: WordCount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:238)
+	at org.apache.spark.deploy.worker.DriverWrapper$.main(DriverWrapper.scala:63)
+	at org.apache.spark.deploy.worker.DriverWrapper.main(DriverWrapper.scala)
+19/04/13 13:30:32 INFO ShutdownHookManager: Shutdown hook called
+19/04/13 13:30:32 INFO ShutdownHookManager: Deleting directory /tmp/spark-78faa2fe-6967-4ff8-a174-d2f72995c6bf
+Launch Command: "/usr/local/jdk1.8.0_51/bin/java" "-cp" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/conf/:/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/jars/*:/s/chopin/a/grad/sgaxcell/cs455TermProject/conf/" "-Xmx1024M" "-Dspark.submit.deployMode=cluster" "-Dspark.jars=file:/s/chopin/a/grad/sgaxcell/cs455TermProject/build/libs/cs455TermProject.jar" "-Dspark.app.name=WordCount" "-Dspark.driver.supervise=true" "-Dspark.rpc.askTimeout=10s" "-Dspark.master=spark://phoenix:30311" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@129.82.44.151:46373" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/work/driver-20190413132136-0000/cs455TermProject.jar" "WordCount"
+========================================
+
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/04/13 13:39:06 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:39:06 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:39:06 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:39:06 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:39:06 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:39:06 INFO Utils: Successfully started service 'Driver' on port 38375.
+19/04/13 13:39:06 INFO DriverWrapper: Driver address: 129.82.44.151:38375
+19/04/13 13:39:06 INFO WorkerWatcher: Connecting to worker spark://Worker@129.82.44.151:46373
+19/04/13 13:39:07 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:39:07 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:39:07 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:39:07 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:39:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:39:07 INFO TransportClientFactory: Successfully created connection to /129.82.44.151:46373 after 42 ms (0 ms spent in bootstraps)
+19/04/13 13:39:07 INFO WorkerWatcher: Successfully connected to spark://Worker@129.82.44.151:46373
+Exception in thread "main" java.lang.ClassNotFoundException: WordCount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:238)
+	at org.apache.spark.deploy.worker.DriverWrapper$.main(DriverWrapper.scala:63)
+	at org.apache.spark.deploy.worker.DriverWrapper.main(DriverWrapper.scala)
+19/04/13 13:39:07 INFO ShutdownHookManager: Shutdown hook called
+19/04/13 13:39:07 INFO ShutdownHookManager: Deleting directory /tmp/spark-d901bf73-3ce0-4b8c-8cd8-49410236f066
+Launch Command: "/usr/local/jdk1.8.0_51/bin/java" "-cp" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/conf/:/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/jars/*:/s/chopin/a/grad/sgaxcell/cs455TermProject/conf/" "-Xmx1024M" "-Dspark.submit.deployMode=cluster" "-Dspark.jars=file:/s/chopin/a/grad/sgaxcell/cs455TermProject/build/libs/cs455TermProject.jar" "-Dspark.app.name=WordCount" "-Dspark.driver.supervise=true" "-Dspark.rpc.askTimeout=10s" "-Dspark.master=spark://phoenix:30311" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@129.82.44.151:46373" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/work/driver-20190413132136-0000/cs455TermProject.jar" "WordCount"
+========================================
+
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/04/13 13:56:13 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:56:13 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:56:13 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:56:13 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:56:13 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:56:13 INFO Utils: Successfully started service 'Driver' on port 37419.
+19/04/13 13:56:13 INFO DriverWrapper: Driver address: 129.82.44.151:37419
+19/04/13 13:56:13 INFO WorkerWatcher: Connecting to worker spark://Worker@129.82.44.151:46373
+19/04/13 13:56:13 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 13:56:13 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 13:56:13 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 13:56:13 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 13:56:13 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 13:56:13 INFO TransportClientFactory: Successfully created connection to /129.82.44.151:46373 after 44 ms (0 ms spent in bootstraps)
+19/04/13 13:56:13 INFO WorkerWatcher: Successfully connected to spark://Worker@129.82.44.151:46373
+Exception in thread "main" java.lang.ClassNotFoundException: WordCount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:238)
+	at org.apache.spark.deploy.worker.DriverWrapper$.main(DriverWrapper.scala:63)
+	at org.apache.spark.deploy.worker.DriverWrapper.main(DriverWrapper.scala)
+19/04/13 13:56:14 INFO ShutdownHookManager: Shutdown hook called
+19/04/13 13:56:14 INFO ShutdownHookManager: Deleting directory /tmp/spark-1d2af01b-84da-43b0-b1f7-7b32d0cd0f15
+Launch Command: "/usr/local/jdk1.8.0_51/bin/java" "-cp" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/conf/:/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/jars/*:/s/chopin/a/grad/sgaxcell/cs455TermProject/conf/" "-Xmx1024M" "-Dspark.submit.deployMode=cluster" "-Dspark.jars=file:/s/chopin/a/grad/sgaxcell/cs455TermProject/build/libs/cs455TermProject.jar" "-Dspark.app.name=WordCount" "-Dspark.driver.supervise=true" "-Dspark.rpc.askTimeout=10s" "-Dspark.master=spark://phoenix:30311" "org.apache.spark.deploy.worker.DriverWrapper" "spark://Worker@129.82.44.151:46373" "/s/chopin/a/grad/sgaxcell/cs455TermProject/spark-2.4.1-bin-hadoop2.7/work/driver-20190413132136-0000/cs455TermProject.jar" "WordCount"
+========================================
+
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/04/13 14:30:24 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 14:30:24 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 14:30:24 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 14:30:24 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 14:30:24 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 14:30:24 INFO Utils: Successfully started service 'Driver' on port 33427.
+19/04/13 14:30:24 INFO DriverWrapper: Driver address: 129.82.44.151:33427
+19/04/13 14:30:24 INFO WorkerWatcher: Connecting to worker spark://Worker@129.82.44.151:46373
+19/04/13 14:30:24 INFO SecurityManager: Changing view acls to: sgaxcell
+19/04/13 14:30:24 INFO SecurityManager: Changing modify acls to: sgaxcell
+19/04/13 14:30:24 INFO SecurityManager: Changing view acls groups to: 
+19/04/13 14:30:24 INFO SecurityManager: Changing modify acls groups to: 
+19/04/13 14:30:24 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sgaxcell); groups with view permissions: Set(); users  with modify permissions: Set(sgaxcell); groups with modify permissions: Set()
+19/04/13 14:30:24 INFO TransportClientFactory: Successfully created connection to /129.82.44.151:46373 after 43 ms (0 ms spent in bootstraps)
+19/04/13 14:30:24 INFO WorkerWatcher: Successfully connected to spark://Worker@129.82.44.151:46373
+Exception in thread "main" java.lang.ClassNotFoundException: WordCount
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:238)
+	at org.apache.spark.deploy.worker.DriverWrapper$.main(DriverWrapper.scala:63)
+	at org.apache.spark.deploy.worker.DriverWrapper.main(DriverWrapper.scala)
+19/04/13 14:30:24 INFO ShutdownHookManager: Shutdown hook called
+19/04/13 14:30:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-c94a51ad-a405-40a5-9f62-337fa3b76155
