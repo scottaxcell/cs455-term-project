@@ -11,7 +11,7 @@ export HADOOP_CONF_DIR=${HOME}/cs455TermProject/hadoop-conf
 Start and stop
 ```
 ./scripts/start-dfs.sh && ./scripts/start-yarn.sh
-./scripts/stop-dfs.sh && ./scripts/stop-yarn.sh
+./scripts/stop-yarn.sh && ./scripts/stop-dfs.sh
 ```
 
 Hadoop Web UI - http://phoenix:54301/dfshealth.html#tab-overview
