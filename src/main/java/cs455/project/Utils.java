@@ -27,4 +27,8 @@ public class Utils {
     public static boolean isValidString(String str) {
         return str != null && !str.isEmpty() && !str.trim().isEmpty();
     }
+
+    public static String[] splitCommaDelimitedString(String s) {
+        return s.split(Constants.COMMA_STR);
+    }
 }
