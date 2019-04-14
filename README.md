@@ -39,9 +39,10 @@ Start and stop
 $SPARK_HOME/sbin/start-all.sh
 $SPARK_HOME/sbin/stop-all.sh
 ```
-Web UI - http://phoenix:30312
+Web UI - http://phoenix:30319
 
 Word Count example
 ```
-$SPARK_HOME/bin/spark-submit --master spark://phoenix:30311 --deploy-mode cluster --class WordCount --supervise build/libs/cs455TermProject.jar
+$HADOOP_HOME/bin/hdfs dfs -rm -r /user/${USER}/wordcount-out
+$SPARK_HOME/bin/spark-submit --master spark://phoenix:30318 --deploy-mode cluster --class cs455.project.wordcount.WordCount --supervise build/libs/cs455TermProject.jar
 ```

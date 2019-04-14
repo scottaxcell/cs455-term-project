@@ -57,8 +57,8 @@
 # - SPARK_PUBLIC_DNS, to set the public dns name of the master or workers
 
 export SPARK_MASTER_IP=phoenix
-export SPARK_MASTER_PORT=30311
-export SPARK_MASTER_WEBUI_PORT=30312
+export SPARK_MASTER_PORT=30318
+export SPARK_MASTER_WEBUI_PORT=30319
 export SPARK_WORKER_CORES=2
 export SPARK_WORKER_MEMORY=2g
 export SPARK_WORKER_INSTANCES=2

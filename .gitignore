@@ -28,3 +28,5 @@ gradle/
 build/
 data/
 out/
+spark-2.4.1-bin-hadoop2.7/logs/
+spark-2.4.1-bin-hadoop2.7/work/
