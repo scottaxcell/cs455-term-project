@@ -1,4 +1,4 @@
-package cs455.project;
+package cs455.project.drivers;
 
 import cs455.project.crimes.CrimesHelper;
 import cs455.project.utils.Constants;
@@ -10,27 +10,27 @@ import org.apache.spark.api.java.JavaSparkContext;
 import java.util.List;
 
 
-public class LocationDescriptionSet {
+public class PrimaryTypeSet {
     public static void main(String[] args) {
-        SparkConf conf = new SparkConf().setAppName("Location Description Set");
+        SparkConf conf = new SparkConf().setAppName("Primary Type Set");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
         JavaRDD<String> textFile = sc.textFile(Constants.HDFS_CRIMES_DIR);
-        List<String> uniqueLocationDescriptions = textFile
-                .map(LocationDescriptionSet::getLocationDescription)
+        List<String> uniquePrimaryTypes = textFile
+                .map(PrimaryTypeSet::getPrimaryType)
                 .filter(Utils::isValidString)
                 .distinct()
                 .sortBy(s -> s, true, 1)
                 .collect();
 
-        sc.parallelize(uniqueLocationDescriptions, 1)
-                .saveAsTextFile("locationDescriptionSet");
+        sc.parallelize(uniquePrimaryTypes, 1)
+                .saveAsTextFile("primaryTypeSet");
     }
 
-    private static String getLocationDescription(String s) {
+    private static String getPrimaryType(String s) {
         String[] split = Utils.splitCommaDelimitedString(s);
         if (split.length != CrimesHelper.NUM_FIELDS)
             return "";
-        return split[CrimesHelper.LOCATION_DESCRIPTION_INDEX];
+        return split[CrimesHelper.PRIMARY_TYPE_INDEX];
     }
 }

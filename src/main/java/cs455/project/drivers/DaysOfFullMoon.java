@@ -1,4 +1,4 @@
-package cs455.project;
+package cs455.project.drivers;
 
 import cs455.project.moons.MoonPhase;
 import cs455.project.moons.MoonsHelper;

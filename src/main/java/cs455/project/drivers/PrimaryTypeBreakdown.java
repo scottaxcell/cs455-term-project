@@ -1,4 +1,4 @@
-package cs455.project;
+package cs455.project.drivers;
 
 import cs455.project.crimes.CrimesHelper;
 import cs455.project.utils.Constants;
@@ -59,7 +59,7 @@ public class PrimaryTypeBreakdown {
         List<String> writeMe = new ArrayList<>();
         primaryTypeToCount.entrySet().stream()
                 .forEach(e -> {
-                    double percentage = calculatePercentageOfTotal(totalNumCrimes, e.getValue());
+                    double percentage = calculatePercentageOfTotal(e.getValue(), totalNumCrimes);
                     writeMe.add(String.format("%s : %.4f", e.getKey(), percentage));
                 });
 
@@ -67,7 +67,7 @@ public class PrimaryTypeBreakdown {
                 .saveAsTextFile("primaryTypeBreakdown");
     }
 
-    private static double calculatePercentageOfTotal(int total, int value) {
-        return total / value;
+    private static double calculatePercentageOfTotal(int value, int total) {
+        return value * 100 / total;
     }
 }
