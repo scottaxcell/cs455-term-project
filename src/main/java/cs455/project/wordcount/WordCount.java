@@ -1,7 +1,7 @@
 package cs455.project.wordcount;
 
-import cs455.project.Constants;
-import cs455.project.Utils;
+import cs455.project.utils.Constants;
+import cs455.project.utils.Utils;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;

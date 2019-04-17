@@ -1,5 +1,8 @@
 package cs455.project;
 
+import cs455.project.crimes.CrimesHelper;
+import cs455.project.utils.Constants;
+import cs455.project.utils.Utils;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
@@ -26,8 +29,8 @@ public class LocationDescriptionSet {
 
     private static String getLocationDescription(String s) {
         String[] split = Utils.splitCommaDelimitedString(s);
-        if (split.length != CrimesIndices.NUM_FIELDS)
+        if (split.length != CrimesHelper.NUM_FIELDS)
             return "";
-        return split[CrimesIndices.LOCATION_DESCRIPTION_INDEX];
+        return split[CrimesHelper.LOCATION_DESCRIPTION_INDEX];
     }
 }

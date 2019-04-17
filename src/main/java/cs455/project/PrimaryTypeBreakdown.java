@@ -1,5 +1,8 @@
 package cs455.project;
 
+import cs455.project.crimes.CrimesHelper;
+import cs455.project.utils.Constants;
+import cs455.project.utils.Utils;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
@@ -11,9 +14,13 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class PrimaryTypeBreakdown {
-    private static Map<String, Integer> primaryTypeToCount = new HashMap<>();
+    private Map<String, Integer> primaryTypeToCount = new HashMap<>();
 
     public static void main(String[] args) {
+        new PrimaryTypeBreakdown().run();
+    }
+
+    private void run() {
         SparkConf conf = new SparkConf().setAppName("Primary Type Breakdown");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
@@ -24,23 +31,23 @@ public class PrimaryTypeBreakdown {
                 .collect();
 
         breakdownCrimes(allCrimes);
-        
+
         saveCrimeBreakdownToFile(sc, primaryTypeToCount);
     }
 
     private static String getPrimaryType(String s) {
         String[] split = Utils.splitCommaDelimitedString(s);
-        if (split.length != CrimesIndices.NUM_FIELDS)
+        if (split.length != CrimesHelper.NUM_FIELDS)
             return "";
-        return split[CrimesIndices.PRIMARY_TYPE_INDEX];
+        return split[CrimesHelper.PRIMARY_TYPE_INDEX];
     }
 
-    private static void breakdownCrimes(List<String> crimes) {
+    private void breakdownCrimes(List<String> crimes) {
         crimes.stream()
-                .forEach(PrimaryTypeBreakdown::incrementCount);
+                .forEach(this::incrementCount);
     }
 
-    private static void incrementCount(String key) {
+    private void incrementCount(String key) {
         int count = primaryTypeToCount.containsKey(key) ? primaryTypeToCount.get(key) : 0;
         primaryTypeToCount.put(key, count + 1);
     }

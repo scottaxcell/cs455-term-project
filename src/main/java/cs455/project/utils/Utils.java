@@ -1,4 +1,4 @@
-package cs455.project;
+package cs455.project.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
