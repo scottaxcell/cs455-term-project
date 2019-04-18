@@ -31,6 +31,8 @@ To do this uncomment the commented lines in cs455.project.drivers.FullMoonCrimeS
 See lines 32, 36, 50. I've opened permission on those datafiles so you should be able to read them.
 Let me know if you can't.
 
+Execute cs455.project.drivers.FullMoonCrimeStats.main via your favorite IDE.
+
 The results when running locally will be written to your cwd rather than HDFS.
 
 ## Hadoop/YARN
