@@ -39,7 +39,7 @@ public class DaysOfFullMoon {
     private static String getMoonData(String s) {
         String[] split = Utils.splitCommaDelimitedString(s);
         String date = split[MoonsHelper.DATE_INDEX];
-        String friendlyDate = split[MoonsHelper.FRIENDLY_DATE_INDEX];
+        String friendlyDate = split[MoonsHelper.FRIENDLY_DATE_INDEX_0] + split[MoonsHelper.FRIENDLY_DATE_INDEX_1];
         String phase = split[MoonsHelper.PHASE_INDEX];
         String time = split[MoonsHelper.TIME_INDEX];
         return String.format("%s : %s : %s : %s", date, friendlyDate, time, phase);

@@ -44,6 +44,6 @@ public class Utils {
     }
 
     public static double calculatePercentageOfTotal(int value, int total) {
-        return value * 100 / total;
+        return value * 100d / total;
     }
 }
