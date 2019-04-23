@@ -62,6 +62,7 @@ export SPARK_MASTER_WEBUI_PORT=30319
 export SPARK_WORKER_CORES=2
 export SPARK_WORKER_MEMORY=2g
 export SPARK_WORKER_INSTANCES=2
+export SPARK_WORKER_OPTS="-Dspark.worker.cleanup.enabled=true -Dspark.worker.cleanup.appDataTtl=86400"
 
 # Generic options for the daemons used in the standalone deploy mode
 # - SPARK_CONF_DIR      Alternate conf dir. (Default: ${SPARK_HOME}/conf)
