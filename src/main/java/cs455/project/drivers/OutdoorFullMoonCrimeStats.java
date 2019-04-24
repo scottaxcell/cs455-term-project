@@ -13,23 +13,24 @@ import org.apache.spark.broadcast.Broadcast;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
- * Collects crime statistics on days of a full moon
+ * Collects outdoor crime statistics on days of a full moon
  * - prints total number of crimes
  * - prints percentage of crime per type
  */
-public class FullMoonCrimeStats {
+public class OutdoorFullMoonCrimeStats {
     private List<LocalDate> fullMoonDates = new ArrayList<>();
     private Map<String, Integer> crimeTypeToCount = new HashMap<>();
 
     public static void main(String[] args) {
-        new FullMoonCrimeStats().run();
+        new OutdoorFullMoonCrimeStats().run();
     }
 
     private void run() {
-        SparkConf conf = new SparkConf().setAppName("Full Moon Crime Stats");
-//        SparkConf conf = new SparkConf().setMaster("local").setAppName("Full Moon Crime Stats");
+        SparkConf conf = new SparkConf().setAppName("Outdoor Full Moon Crime Stats");
+//        SparkConf conf = new SparkConf().setMaster("local").setAppName("Outdoor Full Moon Crime Stats");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
         JavaRDD<String> textFile = sc.textFile(Constants.HDFS_MOONS_DIR);
@@ -37,14 +38,17 @@ public class FullMoonCrimeStats {
         List<LocalDate> fullMoonDates = textFile
             .filter(MoonsHelper::isValidEntry)
             .map(Utils::splitCommaDelimitedString)
-            .filter(FullMoonCrimeStats::isFullMoon)
-            .map(FullMoonCrimeStats::getDate)
+            .filter(OutdoorFullMoonCrimeStats::isFullMoon)
+            .map(OutdoorFullMoonCrimeStats::getDate)
             .filter(Objects::nonNull)
             .collect();
 
         compileFullMoons(fullMoonDates);
 
         Broadcast<List<LocalDate>> fullMoonDatesBroadcast = sc.broadcast(this.fullMoonDates);
+        List<String> outdoorLocations = Stream.of(CrimesHelper.OUTDOOR_LOCATIONS)
+            .collect(Collectors.toList());
+        Broadcast<List<String>> outdoorLocationsBroadcast = sc.broadcast(outdoorLocations);
 
         textFile = sc.textFile(Constants.HDFS_CRIMES_DIR);
 //        textFile = sc.textFile("/s/chopin/a/grad/sgaxcell/cs455TermProject/data/chicagoCrimes2001ToPresent.csv");
@@ -52,7 +56,8 @@ public class FullMoonCrimeStats {
             .filter(CrimesHelper::isValidEntry)
             .map(Utils::splitCommaDelimitedString)
             .filter(split -> crimeOccurredOnFullMoon(fullMoonDatesBroadcast, split))
-            .map(FullMoonCrimeStats::getType)
+            .filter(split -> crimeOccurredOutdoors(outdoorLocationsBroadcast, split))
+            .map(OutdoorFullMoonCrimeStats::getType)
             .filter(Utils::isValidString)
             .collect();
 
@@ -61,13 +66,17 @@ public class FullMoonCrimeStats {
         saveStatisticsToFile(sc);
     }
 
+    private static boolean crimeOccurredOutdoors(Broadcast<List<String>> outdoorLocations, String[] split) {
+        return outdoorLocations.value().contains(split[CrimesHelper.LOCATION_DESCRIPTION_INDEX]);
+    }
+
     private void saveStatisticsToFile(JavaSparkContext sc) {
         int totalNumCrimes = (int) crimeTypeToCount.values().stream()
             .collect(Collectors.summarizingInt(i -> i)).getSum();
 
         List<String> writeMe = new ArrayList<>();
-        writeMe.add("Full Moon Crime Statistics");
-        writeMe.add("==========================");
+        writeMe.add("Outdoor Full Moon Crime Statistics");
+        writeMe.add("===================================");
         writeMe.add(String.format("Total # crimes: %d", totalNumCrimes));
         writeMe.add("Crime Percentage By Type");
         writeMe.add("------------------------");
@@ -79,7 +88,7 @@ public class FullMoonCrimeStats {
             });
 
         sc.parallelize(writeMe, 1)
-            .saveAsTextFile("FullMoonCrimeStats");
+            .saveAsTextFile("OutdoorFullMoonCrimeStats");
     }
 
     private void collateCrimes(List<String> crimes) {

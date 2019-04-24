@@ -25,11 +25,11 @@ public class CrimesHelper {
         return true;
     }
 
-    public static boolean isLocationOutside(String location) {
-        return Stream.of(outsideLocations).anyMatch(location::equals);
+    public static boolean isOutdoorLocation(String location) {
+        return Stream.of(OUTDOOR_LOCATIONS).anyMatch(location::equals);
     }
 
-    public static final String[] outsideLocations = new String[]{
+    public static final String[] OUTDOOR_LOCATIONS = new String[]{
         "ABANDONED BUILDING",
         "AIRCRAFT",
         "AIRPORT BUILDING NON-TERMINAL - NON-SECURE AREA",
@@ -132,11 +132,11 @@ public class CrimesHelper {
         "YMCA"
     };
 
-    public static boolean isLocationInside(String location) {
-        return Stream.of(insideLocations).anyMatch(location::equals);
+    public static boolean isIndoorLocation(String location) {
+        return Stream.of(INDOOR_LOCATIONS).anyMatch(location::equals);
     }
 
-    public static final String[] insideLocations = new String[]{
+    public static final String[] INDOOR_LOCATIONS = new String[]{
         "\"CTA \"\"L\"\" PLATFORM\"",
         "\"CTA \"\"L\"\" TRAIN\"",
         "AIRPORT EXTERIOR - NON-SECURE AREA",
