@@ -51,7 +51,7 @@ public class NotFullMoonCrimeStats extends Driver {
 
       List<String> writeMe = new ArrayList<>();
       writeMe.add("Not Full Moon Crime Statistics");
-      writeMe.add("==========================");
+      writeMe.add("==============================");
       writeMe.add(String.format("Total # crimes: %d", totalNumCrimes));
       writeMe.add("Crime Percentage By Type");
       writeMe.add("------------------------");

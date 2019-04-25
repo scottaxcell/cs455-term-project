@@ -8,7 +8,6 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -41,7 +40,7 @@ public class CrimeStats extends Driver {
 
       List<String> writeMe = new ArrayList<>();
       writeMe.add("Crime Statistics");
-      writeMe.add("==========================");
+      writeMe.add("================");
       writeMe.add(String.format("Total # crimes: %d", totalNumCrimes));
       writeMe.add("Crime Percentage By Type");
       writeMe.add("------------------------");
