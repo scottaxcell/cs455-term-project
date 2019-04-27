@@ -3,7 +3,9 @@ package cs455.project.utils;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.TextStyle;
 import java.util.Date;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -45,5 +47,13 @@ public class Utils {
 
     public static double calculatePercentageOfTotal(int value, int total) {
         return value * 100d / total;
+    }
+    
+    public static String getDayOfWeek(String s) {
+    	LocalDate date = getLocalDate(s);
+    	if (date == null) {
+    		return null;
+    	}
+    	return date.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.US);
     }
 }
