@@ -83,6 +83,13 @@ public class OutdoorFullMoonCrimeStats extends Driver {
             writeMe.add(String.format("%s (%d): %.2f", e.getKey(), e.getValue(), percentage));
         });
 
+        writeMe.add("\n");
+        writeMe.add("Type,Number,% of Total");
+        crimeTypeToCount.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(e -> {
+            double percentage = Utils.calculatePercentageOfTotal(e.getValue(), totalNumCrimes);
+            writeMe.add(String.format("%s,%d,%.2f", e.getKey(), e.getValue(), percentage));
+        });
+
         sc.parallelize(writeMe, 1).saveAsTextFile("OutdoorFullMoonCrimeStats");
     }
 }
