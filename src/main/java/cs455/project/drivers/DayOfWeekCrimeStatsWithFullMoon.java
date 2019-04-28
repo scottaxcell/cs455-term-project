@@ -75,6 +75,7 @@ public class DayOfWeekCrimeStatsWithFullMoon {
         
         for (int i = 0; i < Constants.DAYS_OF_WEEK.length; i++) {
         	if (!Constants.DAYS_OF_WEEK[i].isEmpty()) {
+        		String day = Constants.DAYS_OF_WEEK[i];
         		Map<String, Integer> entry = dayToCrimeTypeWithCount.get(Constants.DAYS_OF_WEEK[i]);
 	        	writeMe.add("============");
 	        	writeMe.add(Constants.DAYS_OF_WEEK[i]);
@@ -82,14 +83,20 @@ public class DayOfWeekCrimeStatsWithFullMoon {
 	        	
 	        	int crimeTotal = (int) entry.values().stream()
 	                    .collect(Collectors.summarizingInt(j -> j)).getSum();
-	        	writeMe.add("\n");
-	            writeMe.add("Type,Number,% of Total");
 	        	entry.entrySet().stream()
-	        	.sorted(Map.Entry.comparingByValue())
-	        	.forEach(e -> {
+	        		.sorted(Map.Entry.comparingByValue())
+	        		.forEach(e -> {
 	        		double percentage = Utils.calculatePercentageOfTotal(e.getValue(), crimeTotal);
 	                writeMe.add(String.format("%s (%d): %.2f", e.getKey(), e.getValue(), percentage));
 	        	});
+	        	writeMe.add("\n");
+	            writeMe.add("Day Of Week,Type,Number,% of Total");
+	            entry.entrySet().stream()
+        			.sorted(Map.Entry.comparingByValue())
+        			.forEach(e -> {
+        		double percentage = Utils.calculatePercentageOfTotal(e.getValue(), crimeTotal);
+                writeMe.add(String.format("%s,%s,%d,%.2f", day, e.getKey(), e.getValue(), percentage));
+        	});
 	        	
         	}
         }
