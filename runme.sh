@@ -1,6 +1,8 @@
 #!/bin/env bash
 
-PERSONAL_SPARK=phoenix:30318
+PERSONAL_SPARK=phoenix:30318 # Scott's spark
+#PERSONAL_SPARK=topeka:50318 # Matt's spark
+
 
 gradle assemble
 
