@@ -2,6 +2,8 @@
 
 PERSONAL_SPARK=phoenix:30318
 
+gradle assemble
+
 $HADOOP_HOME/bin/hdfs dfs -rm -r /user/${USER}/CrimeStats
 $SPARK_HOME/bin/spark-submit \
 --master spark://$PERSONAL_SPARK \
