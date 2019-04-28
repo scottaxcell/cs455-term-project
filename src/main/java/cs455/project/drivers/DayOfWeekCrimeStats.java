@@ -94,6 +94,7 @@ public class DayOfWeekCrimeStats {
 	        	
         	}
         }
+        
         sc.parallelize(writeMe, 1)
             .saveAsTextFile("DayOfWeekCrimeStats");
     }
