@@ -19,17 +19,17 @@ import cs455.project.moons.MoonsHelper;
 import cs455.project.utils.Constants;
 import cs455.project.utils.Utils;
 
-public class DayOfWeekCrimeStatsWithFullMoon {
+public class DayOfWeekNonFullMoonCrimeStats {
 	private List<LocalDate> fullMoonDates = new ArrayList<>();
 	private Map<String, Map<String, Integer>> dayToCrimeTypeWithCount = new HashMap();
 	private Map<String, Integer> dayWithDayCount = new HashMap();
 
     public static void main(String[] args) {
-        new DayOfWeekCrimeStatsWithFullMoon().run();
+        new DayOfWeekNonFullMoonCrimeStats().run();
     }
 
     private void run() {
-        SparkConf conf = new SparkConf().setAppName("Day of Week Crime With Full Moon Stats");
+        SparkConf conf = new SparkConf().setAppName("Day of Week Crime With Non-Full Moon Stats");
         JavaSparkContext sc = new JavaSparkContext(conf);
         
         JavaRDD<String> textFile = sc.textFile(Constants.HDFS_MOONS_DIR);
@@ -37,8 +37,8 @@ public class DayOfWeekCrimeStatsWithFullMoon {
         List<LocalDate> fullMoonDates = textFile
         		.filter(MoonsHelper::isValidEntry)
         		.map(Utils::splitCommaDelimitedString)
-        		.filter(DayOfWeekCrimeStatsWithFullMoon::isFullMoon)
-        		.map(DayOfWeekCrimeStatsWithFullMoon::getDate)
+        		.filter(DayOfWeekNonFullMoonCrimeStats::isFullMoon)
+        		.map(DayOfWeekNonFullMoonCrimeStats::getDate)
         		.filter(Objects::nonNull)
         		.collect();
         
@@ -53,8 +53,8 @@ public class DayOfWeekCrimeStatsWithFullMoon {
                     .filter(CrimesHelper::isValidEntry)
                     .map(Utils::splitCommaDelimitedString)
                     .filter(day -> getWeekdayName(day).equals(s))
-                    .filter(split -> crimeOccurredOnFullMoon(fullMoonDatesBroadcast, split))
-                    .map(DayOfWeekCrimeStatsWithFullMoon::getType)
+                    .filter(split -> !crimeOccurredOnFullMoon(fullMoonDatesBroadcast, split))
+                    .map(DayOfWeekNonFullMoonCrimeStats::getType)
                     .filter(Utils::isValidString)
                     .collect();
         	
@@ -65,12 +65,13 @@ public class DayOfWeekCrimeStatsWithFullMoon {
         			.filter(CrimesHelper::isValidEntry)
         			.map(Utils::splitCommaDelimitedString)
         			.filter(day -> getWeekdayName(day).equals(s))
-        			.filter(split -> crimeOccurredOnFullMoon(fullMoonDatesBroadcast, split))
-        			.map(DayOfWeekCrimeStatsWithFullMoon::getCrimeDate)
+        			.filter(split -> !crimeOccurredOnFullMoon(fullMoonDatesBroadcast, split))
+        			.map(DayOfWeekNonFullMoonCrimeStats::getCrimeDate)
         			.distinct()
             		.filter(Objects::nonNull)
             		.collect().size();
         	dayWithDayCount.put(s, numberOfDayType);
+        	
         }
 
         saveStatisticsToFile(sc);
@@ -79,11 +80,11 @@ public class DayOfWeekCrimeStatsWithFullMoon {
     private void saveStatisticsToFile(JavaSparkContext sc) {
 
         List<String> writeMe = new ArrayList<>();
-        writeMe.add("Day of Week Crime With Full Moon Statistics");
+        writeMe.add("Day of Week Crime With Non-Full Moon Statistics");
         writeMe.add("===========================================");
         //writeMe.add(String.format("Total # crimes: %d", totalNumCrimes));
-        writeMe.add("Crime Percentage By Type Only on Full Moons on Corresponding Day of Week");
-        writeMe.add("------------------------------------------------------------------------");
+        writeMe.add("Crime Percentage By Type Only on Non-Full Moons on Corresponding Day of Week");
+        writeMe.add("----------------------------------------------------------------------------");
         
         for (int i = 0; i < Constants.DAYS_OF_WEEK.length; i++) {
         	if (!Constants.DAYS_OF_WEEK[i].isEmpty()) {
@@ -115,7 +116,7 @@ public class DayOfWeekCrimeStatsWithFullMoon {
         }
         
         sc.parallelize(writeMe, 1)
-            .saveAsTextFile("DayOfWeekCrimeStatsWithFullMoon");
+            .saveAsTextFile("DayOfWeekNonFullMoonCrimeStats");
     }
 
     private Map<String, Integer> collateCrimesToList(List<String> crimes) {
@@ -159,7 +160,7 @@ public class DayOfWeekCrimeStatsWithFullMoon {
     private void compileFullMoons(List<LocalDate> dates) {
         for (LocalDate date : dates) {
             if (!fullMoonDates.contains(date))
-                fullMoonDates.add(date);
+            	fullMoonDates.add(date);
         }
     }
     

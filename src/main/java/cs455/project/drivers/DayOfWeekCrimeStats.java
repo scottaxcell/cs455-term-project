@@ -1,9 +1,11 @@
 package cs455.project.drivers;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import org.apache.spark.SparkConf;
@@ -16,6 +18,7 @@ import cs455.project.utils.Utils;
 
 public class DayOfWeekCrimeStats {
 	private Map<String, Map<String, Integer>> dayToCrimeTypeWithCount = new HashMap();
+	private Map<String, Integer> dayWithDayCount = new HashMap();
 
     public static void main(String[] args) {
         new DayOfWeekCrimeStats().run();
@@ -37,6 +40,16 @@ public class DayOfWeekCrimeStats {
         	
         	Map<String, Integer> crimeTypeToCountAgain = collateCrimesToList(crimes);
         	dayToCrimeTypeWithCount.put(s, crimeTypeToCountAgain);
+        	
+        	int numberOfDayType = textFile
+        			.filter(CrimesHelper::isValidEntry)
+        			.map(Utils::splitCommaDelimitedString)
+        			.filter(day -> getWeekdayName(day).equals(s))
+        			.map(DayOfWeekCrimeStats::getCrimeDate)
+        			.distinct()
+            		.filter(Objects::nonNull)
+            		.collect().size();
+        	dayWithDayCount.put(s, numberOfDayType);
         }
 
         saveStatisticsToFile(sc);
@@ -59,6 +72,7 @@ public class DayOfWeekCrimeStats {
         		Map<String, Integer> entry = dayToCrimeTypeWithCount.get(Constants.DAYS_OF_WEEK[i]);
 	        	writeMe.add("============");
 	        	writeMe.add(Constants.DAYS_OF_WEEK[i]);
+	        	writeMe.add("Total Number of " + Constants.DAYS_OF_WEEK[i] + "s: " + dayWithDayCount.get(day));
 	        	writeMe.add("============");
 
 	        	int crimeTotal = (int) entry.values().stream()
@@ -96,6 +110,11 @@ public class DayOfWeekCrimeStats {
 
     private static String getType(String[] split) {
         return split[CrimesHelper.PRIMARY_TYPE_INDEX];
+    }
+    
+    private static LocalDate getCrimeDate(String[] split) {
+    	String date = split[CrimesHelper.DATE_INDEX];
+        return Utils.getLocalDate(date);
     }
 
     private static String getWeekdayName(String[] split) {
