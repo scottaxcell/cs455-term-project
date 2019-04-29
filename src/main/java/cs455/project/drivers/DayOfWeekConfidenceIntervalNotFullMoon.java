@@ -8,37 +8,46 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.broadcast.Broadcast;
+import scala.Tuple2;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.*;
 
-public class DayOfWeekConfidenceInterval extends Driver {
+public class DayOfWeekConfidenceIntervalNotFullMoon extends Driver implements Serializable {
 
    // 01/05/2008, Arson, 1
-   private Map<LocalDate, Map<String, Integer>> crimes = new HashMap<>();
+   Map<LocalDate, Map<String, Integer>> crimes = new HashMap<>();
 
    // Sunday, <Number of Sundays>, Arson, <Arson on Sunday Count>, <Average Arson on Sunday>, <Std Dev>, <Conf Intv>
-   private Map<String, CrimesToday> stats = new HashMap<>();
+   Map<String, CrimesToday> stats = new HashMap<>();
 
    public static void main(String[] args) {
-      new DayOfWeekConfidenceInterval().run();
+      new DayOfWeekConfidenceIntervalNotFullMoon().run();
    }
 
-   private void run() {
-      SparkConf conf = new SparkConf().setAppName("Day of Week Crime With Full Moon Stats");
+   void run() {
+      SparkConf conf = new SparkConf().setAppName("Day Of Week Confidence Interval Application Without Full Moon");
+      //SparkConf conf = new SparkConf().setMaster("local").setAppName("Day Of Week Confidence Interval Application Without Full Moon");
+
       JavaSparkContext sc = new JavaSparkContext(conf);
 
       JavaRDD<String> textFile = sc.textFile(Constants.HDFS_MOONS_DIR);
-      List<LocalDate> fullMoonDates = textFile.filter(MoonsHelper::isValidEntry).map(Utils::splitCommaDelimitedString).filter(DayOfWeekConfidenceInterval::isFullMoon).map(DayOfWeekConfidenceInterval::getDate).filter(Objects::nonNull).collect();
+      //JavaRDD<String> textFile = sc.textFile("/Users/mmuller/Downloads/moons/moon-phases-*.csv");
+
+      List<LocalDate> fullMoonDates = textFile.filter(MoonsHelper::isValidEntry).map(Utils::splitCommaDelimitedString).filter(DayOfWeekConfidenceIntervalNotFullMoon::isFullMoon).map(DayOfWeekConfidenceIntervalNotFullMoon::getDate).filter(Objects::nonNull).collect();
 
       compileFullMoons(fullMoonDates);
 
       Broadcast<List<LocalDate>> fullMoonDatesBroadcast = sc.broadcast(this.fullMoonDates);
 
       textFile = sc.textFile(Constants.HDFS_CRIMES_DIR);
+      //textFile = sc.textFile("/Users/mmuller/Downloads/chicagoCrimes2001ToPresent.csv");
 
-      textFile.filter(CrimesHelper::isValidEntry).map(Utils::splitCommaDelimitedString).filter(split -> !crimeOccurredOnFullMoon(fullMoonDatesBroadcast, split)).foreach(this::collectData);
+      JavaRDD<String[]> fil = textFile.filter(CrimesHelper::isValidEntry).map(Utils::splitCommaDelimitedString).filter(split -> !crimeOccurredOnFullMoon(fullMoonDatesBroadcast, split));
+      Map<String, Integer> flatCount = fil.mapToPair(this::dateTransform).reduceByKey((a, b) -> a + b).collectAsMap();
+      breakUpFlatCount(flatCount);
 
       this.crimes.entrySet().forEach(this::buildBaseStats); // count totals
       this.stats.values().forEach(CrimesToday::calcAverages); // calculate averages
@@ -53,51 +62,69 @@ public class DayOfWeekConfidenceInterval extends Driver {
       List<String> writeMe = new ArrayList<>();
       writeMe.add("Day of Week Crime .95 Confidence Interval Not Full Moon");
       writeMe.add("===========================================");
-      //writeMe.add(String.format("Total # crimes: %d", totalNumCrimes));
-      writeMe.add("These are normal days.  Crime Levels outside of Confidence Interval are Abnormal");
+      writeMe.add("These are normal days.  Crime Level Averages outside of Confidence Interval are Abnormal");
       writeMe.add("------------------------------------------------------------------------");
 
-      this.stats.values().forEach(crimeStats -> {
-         writeMe.add("============");
-         writeMe.add(String.format("%s (Occurrences %d)", crimeStats.weekday, crimeStats.numberOfThisWeekDay));
-         writeMe.add("============");
+      for (String s : Constants.DAYS_OF_WEEK) {
+         if (Utils.isValidString(s)) {
+            CrimesToday crimeStats = this.stats.get(s);
+            writeMe.add("============");
+            writeMe.add(String.format("%s (Occurrences %d)", crimeStats.weekday, crimeStats.numberOfThisWeekDay));
+            writeMe.add("============");
 
-         crimeStats.dailyCrimeConfidenceInterval.entrySet().forEach(crime -> {
-            String key = crime.getKey();
-            writeMe.add(String.format("%s Occurrences %d, Average %.2f ± %.2f, .95 Confidence Interval %.2f ± %.2f", key, crimeStats.dailyCrimeCount.get(key), crimeStats.dailyCrimeAve.get(key), crimeStats.dailyCrimeStd.get(key), crimeStats.dailyCrimeAve.get(key), crime.getValue()));
-         });
-         writeMe.add("\n");
+            crimeStats.dailyCrimeConfidenceInterval.entrySet().forEach(crime -> {
+               String key = crime.getKey();
+               writeMe.add(String.format("%s Occurrences %d, Average %.2f ± %.2f, .95 Confidence Interval %.2f ± %.2f", key, crimeStats.dailyCrimeCount.get(key), crimeStats.dailyCrimeAve.get(key), crimeStats.dailyCrimeStd.get(key), crimeStats.dailyCrimeAve.get(key), crime.getValue()));
+            });
+            writeMe.add("\n");
 
-         writeMe.add("Day Of Week,Type,Number,Ave,StdDev,ConfIntv");
-         crimeStats.dailyCrimeConfidenceInterval.entrySet().forEach(crime -> {
-            String key = crime.getKey();
-            writeMe.add(String.format("%s,%s,%d,%.2f,%.2f,%.2f", crimeStats.weekday, key, crimeStats.dailyCrimeCount.get(key), crimeStats.dailyCrimeAve.get(key), crimeStats.dailyCrimeStd.get(key), crime.getValue()));
-         });
-         writeMe.add("\n");
+            writeMe.add("Day Of Week,Type,Number,Ave,StdDev,ConfIntv");
+            crimeStats.dailyCrimeConfidenceInterval.entrySet().forEach(crime -> {
+               String key = crime.getKey();
+               writeMe.add(String.format("%s,%s,%d,%.2f,%.2f,%.2f", crimeStats.weekday, key, crimeStats.dailyCrimeCount.get(key), crimeStats.dailyCrimeAve.get(key), crimeStats.dailyCrimeStd.get(key), crime.getValue()));
+            });
+            writeMe.add("\n");
+         }
+      }
 
-      });
-
-      sc.parallelize(writeMe, 1).saveAsTextFile("DayOfWeekConfidenceInterval");
+      sc.parallelize(writeMe, 1).saveAsTextFile("DayOfWeekConfidenceIntervalNotFullMoon");
    }
 
-   private void collectData(String[] split) {
+    Tuple2<String, Integer> dateTransform(String[] split) {
       LocalDate day = Utils.getLocalDate(split[CrimesHelper.DATE_INDEX]);
-      String crime = DayOfWeekConfidenceInterval.getType(split);
+      String crime = DayOfWeekConfidenceIntervalNotFullMoon.getType(split);
+
+      if (Utils.isValidString(crime) && day != null) {
+         return new Tuple2<>(day.toString() + "$" + crime, 1);
+      }
+
+      return null;
+   }
+
+    void breakUpFlatCount(Map<String, Integer> flatCount) {
+      flatCount.entrySet().forEach(entry -> {
+         String[] daycrime = entry.getKey().split("\\$");
+         collectData(daycrime[0], daycrime[1], entry.getValue());
+      });
+   }
+
+   private void collectData(String stDay, String crime, int count) {
+      LocalDate day = LocalDate.parse(stDay);
 
       if (Utils.isValidString(crime) && day != null) {
          Map<String, Integer> dailyCrime = getDailyCrime(day);
-         addCrime(dailyCrime, crime);
+         addCrime(dailyCrime, crime, count);
       }
    }
 
-   private void addCrime(Map<String, Integer> dailyCrime, String crime) {
+   private void addCrime(Map<String, Integer> dailyCrime, String crime, int more) {
       Integer count = dailyCrime.get(crime);
 
       if (count == null) {
-         dailyCrime.put(crime, 1);
+         dailyCrime.put(crime, more);
       }
       else {
-         dailyCrime.put(crime, count + 1);
+         dailyCrime.put(crime, count + more);
       }
    }
 
@@ -112,7 +139,7 @@ public class DayOfWeekConfidenceInterval extends Driver {
       return rtn;
    }
 
-   private void buildVariance(Map.Entry<LocalDate, Map<String, Integer>> localDateMapEntry) {
+    void buildVariance(Map.Entry<LocalDate, Map<String, Integer>> localDateMapEntry) {
       String day = localDateMapEntry.getKey().getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.US);
       Map<String, Integer> todaysCrimes = localDateMapEntry.getValue();
       CrimesToday ct = getDaysStats(day);
@@ -121,7 +148,7 @@ public class DayOfWeekConfidenceInterval extends Driver {
 
    }
 
-   private void buildBaseStats(Map.Entry<LocalDate, Map<String, Integer>> localDateMapEntry) {
+    void buildBaseStats(Map.Entry<LocalDate, Map<String, Integer>> localDateMapEntry) {
       String day = localDateMapEntry.getKey().getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.US);
       Map<String, Integer> todaysCrimes = localDateMapEntry.getValue();
       CrimesToday ct = getDaysStats(day);
@@ -149,17 +176,17 @@ public class DayOfWeekConfidenceInterval extends Driver {
       }
    }
 
-   private static class CrimesToday {
+    static class CrimesToday implements Serializable {
 
       private static final float zee = 1.960f; // for ConfIntv of .95
 
       String weekday;
       int numberOfThisWeekDay = 0;
-      Map<String, Integer> dailyCrimeCount;
-      Map<String, Float> dailyCrimeAve;
-      Map<String, Float> dailyCrimeVariance;
-      Map<String, Float> dailyCrimeStd;
-      Map<String, Float> dailyCrimeConfidenceInterval;
+      Map<String, Integer> dailyCrimeCount = new HashMap<>();
+      Map<String, Float> dailyCrimeAve = new HashMap<>();
+      Map<String, Float> dailyCrimeVariance = new HashMap<>();
+      Map<String, Float> dailyCrimeStd = new HashMap<>();
+      Map<String, Float> dailyCrimeConfidenceInterval = new HashMap<>();
 
       CrimesToday(String day) {
          this.weekday = day;
