@@ -14,32 +14,39 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public class DayOfWeekConfidenceIntervalFullMoon extends DayOfWeekConfidenceIntervalNotFullMoon {
+public class DayOfWeekConfidenceIntervalFullMoonOutside extends DayOfWeekConfidenceIntervalNotFullMoon {
 
    public static void main(String[] args) {
-      new DayOfWeekConfidenceIntervalFullMoon().run();
+      new DayOfWeekConfidenceIntervalFullMoonOutside().run();
    }
 
    void run() {
-      SparkConf conf = new SparkConf().setAppName("Day Of Week Confidence Interval Application With Full Moon");
-      //SparkConf conf = new SparkConf().setMaster("local").setAppName("Day Of Week Confidence Interval Application With Full Moon");
+      //SparkConf conf = new SparkConf().setAppName("Day Of Week Confidence Interval Application With Full Moon Outside");
+      SparkConf conf = new SparkConf().setMaster("local").setAppName("Day Of Week Confidence Interval Application With Full Moon Outside");
 
       JavaSparkContext sc = new JavaSparkContext(conf);
 
-      JavaRDD<String> textFile = sc.textFile(Constants.HDFS_MOONS_DIR);
-      //JavaRDD<String> textFile = sc.textFile("/Users/mmuller/Downloads/moons/moon-phases-*.csv");
+      //JavaRDD<String> textFile = sc.textFile(Constants.HDFS_MOONS_DIR);
+      JavaRDD<String> textFile = sc.textFile("/Users/mmuller/Downloads/moons/moon-phases-*.csv");
 
       List<LocalDate> fullMoonDates = textFile.filter(MoonsHelper::isValidEntry).map(Utils::splitCommaDelimitedString).filter(DayOfWeekConfidenceIntervalNotFullMoon::isFullMoon).map(DayOfWeekConfidenceIntervalNotFullMoon::getDate).filter(Objects::nonNull).collect();
 
       compileFullMoons(fullMoonDates);
 
       Broadcast<List<LocalDate>> fullMoonDatesBroadcast = sc.broadcast(this.fullMoonDates);
+      List<String> outdoorLocations = Stream.of(CrimesHelper.OUTDOOR_LOCATIONS).collect(Collectors.toList());
+      Broadcast<List<String>> outdoorLocationsBroadcast = sc.broadcast(outdoorLocations);
 
-      textFile = sc.textFile(Constants.HDFS_CRIMES_DIR);
-      //textFile = sc.textFile("/Users/mmuller/Downloads/chicagoCrimes2001ToPresent.csv");
+      //textFile = sc.textFile(Constants.HDFS_CRIMES_DIR);
+      textFile = sc.textFile("/Users/mmuller/Downloads/chicagoCrimes2001ToPresent.csv");
 
-      JavaRDD<String[]> fil = textFile.filter(CrimesHelper::isValidEntry).map(Utils::splitCommaDelimitedString).filter(split -> crimeOccurredOnFullMoon(fullMoonDatesBroadcast, split));
+      JavaRDD<String[]> fil = textFile.filter(CrimesHelper::isValidEntry)
+            .map(Utils::splitCommaDelimitedString)
+            .filter(split -> crimeOccurredOnFullMoon(fullMoonDatesBroadcast, split))
+            .filter(split -> OutdoorFullMoonCrimeStats.crimeOccurredOutdoors(outdoorLocationsBroadcast, split));
       Map<String, Integer> flatCount = fil.mapToPair(this::dateTransform).reduceByKey((a, b) -> a + b).collectAsMap();
       breakUpFlatCount(flatCount);
 
@@ -54,7 +61,7 @@ public class DayOfWeekConfidenceIntervalFullMoon extends DayOfWeekConfidenceInte
    private void saveStatisticsToFile(JavaSparkContext sc) {
 
       List<String> writeMe = new ArrayList<>();
-      writeMe.add("Day of Week Crime .95 Confidence Interval Full Moon");
+      writeMe.add("Day of Week Crime .95 Confidence Interval Full Moon Outside");
       writeMe.add("===========================================");
       writeMe.add("These are full moon days.  If Their Crime Level Averages are outside of Confidence Interval it's Abnormal");
       writeMe.add("------------------------------------------------------------------------");
@@ -81,6 +88,6 @@ public class DayOfWeekConfidenceIntervalFullMoon extends DayOfWeekConfidenceInte
          }
       }
 
-      sc.parallelize(writeMe, 1).saveAsTextFile("DayOfWeekConfidenceIntervalFullMoon");
+      sc.parallelize(writeMe, 1).saveAsTextFile("DayOfWeekConfidenceIntervalFullMoonOutside");
    }
 }

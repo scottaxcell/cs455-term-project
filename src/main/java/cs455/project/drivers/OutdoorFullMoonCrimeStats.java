@@ -65,7 +65,7 @@ public class OutdoorFullMoonCrimeStats extends Driver {
         saveStatisticsToFile(sc);
     }
 
-    private static boolean crimeOccurredOutdoors(Broadcast<List<String>> outdoorLocations, String[] split) {
+    static boolean crimeOccurredOutdoors(Broadcast<List<String>> outdoorLocations, String[] split) {
         return outdoorLocations.value().contains(split[CrimesHelper.LOCATION_DESCRIPTION_INDEX]);
     }
 
