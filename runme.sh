@@ -13,6 +13,48 @@ $SPARK_HOME/bin/spark-submit \
 --class cs455.project.drivers.CrimeStats \
 --supervise build/libs/cs455TermProject.jar
 
+HADOOP_HOME/bin/hdfs dfs -rm -r /user/${USER}/DayOfWeekConfidenceIntervalFullMoon
+$SPARK_HOME/bin/spark-submit \
+--master spark://$PERSONAL_SPARK \
+--deploy-mode cluster \
+--class cs455.project.drivers.DayOfWeekConfidenceIntervalFullMoon \
+--supervise build/libs/cs455TermProject.jar
+
+HADOOP_HOME/bin/hdfs dfs -rm -r /user/${USER}/DayOfWeekConfidenceIntervalFullMoonInside
+$SPARK_HOME/bin/spark-submit \
+--master spark://$PERSONAL_SPARK \
+--deploy-mode cluster \
+--class cs455.project.drivers.DayOfWeekConfidenceIntervalFullMoonInside \
+--supervise build/libs/cs455TermProject.jar
+
+HADOOP_HOME/bin/hdfs dfs -rm -r /user/${USER}/DayOfWeekConfidenceIntervalFullMoonOutside
+$SPARK_HOME/bin/spark-submit \
+--master spark://$PERSONAL_SPARK \
+--deploy-mode cluster \
+--class cs455.project.drivers.DayOfWeekConfidenceIntervalFullMoonOutside \
+--supervise build/libs/cs455TermProject.jar
+
+HADOOP_HOME/bin/hdfs dfs -rm -r /user/${USER}/DayOfWeekConfidenceIntervalNotFullMoon
+$SPARK_HOME/bin/spark-submit \
+--master spark://$PERSONAL_SPARK \
+--deploy-mode cluster \
+--class cs455.project.drivers.DayOfWeekConfidenceIntervalNotFullMoon \
+--supervise build/libs/cs455TermProject.jar
+
+HADOOP_HOME/bin/hdfs dfs -rm -r /user/${USER}/DayOfWeekConfidenceIntervalNotFullMoonInside
+$SPARK_HOME/bin/spark-submit \
+--master spark://$PERSONAL_SPARK \
+--deploy-mode cluster \
+--class cs455.project.drivers.DayOfWeekConfidenceIntervalNotFullMoonInside \
+--supervise build/libs/cs455TermProject.jar
+
+HADOOP_HOME/bin/hdfs dfs -rm -r /user/${USER}/DayOfWeekConfidenceIntervalNotFullMoonOutside
+$SPARK_HOME/bin/spark-submit \
+--master spark://$PERSONAL_SPARK \
+--deploy-mode cluster \
+--class cs455.project.drivers.DayOfWeekConfidenceIntervalNotFullMoonOutside \
+--supervise build/libs/cs455TermProject.jar
+
 HADOOP_HOME/bin/hdfs dfs -rm -r /user/${USER}/DayOfWeekCrimeStats
 $SPARK_HOME/bin/spark-submit \
 --master spark://$PERSONAL_SPARK \

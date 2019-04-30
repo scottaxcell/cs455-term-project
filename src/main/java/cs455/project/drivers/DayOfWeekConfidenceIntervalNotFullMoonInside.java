@@ -30,13 +30,13 @@ public class DayOfWeekConfidenceIntervalNotFullMoonInside extends Driver impleme
    }
 
    void run() {
-      //SparkConf conf = new SparkConf().setAppName("Day Of Week Confidence Interval Application Without Full Moon Inside");
-      SparkConf conf = new SparkConf().setMaster("local").setAppName("Day Of Week Confidence Interval Application Without Full Moon Inside");
+      SparkConf conf = new SparkConf().setAppName("Day Of Week Confidence Interval Application Without Full Moon Inside");
+      //SparkConf conf = new SparkConf().setMaster("local").setAppName("Day Of Week Confidence Interval Application Without Full Moon Inside");
 
       JavaSparkContext sc = new JavaSparkContext(conf);
 
-      //JavaRDD<String> textFile = sc.textFile(Constants.HDFS_MOONS_DIR);
-      JavaRDD<String> textFile = sc.textFile("/Users/mmuller/Downloads/moons/moon-phases-*.csv");
+      JavaRDD<String> textFile = sc.textFile(Constants.HDFS_MOONS_DIR);
+      //JavaRDD<String> textFile = sc.textFile("/Users/mmuller/Downloads/moons/moon-phases-*.csv");
 
       List<LocalDate> fullMoonDates = textFile.filter(MoonsHelper::isValidEntry).map(Utils::splitCommaDelimitedString).filter(DayOfWeekConfidenceIntervalNotFullMoonInside::isFullMoon).map(DayOfWeekConfidenceIntervalNotFullMoonInside::getDate).filter(Objects::nonNull).collect();
 
@@ -46,8 +46,8 @@ public class DayOfWeekConfidenceIntervalNotFullMoonInside extends Driver impleme
       List<String> indoorLocations = Stream.of(CrimesHelper.INDOOR_LOCATIONS).collect(Collectors.toList());
       Broadcast<List<String>> indoorLocationsBroadcast = sc.broadcast(indoorLocations);
 
-      //textFile = sc.textFile(Constants.HDFS_CRIMES_DIR);
-      textFile = sc.textFile("/Users/mmuller/Downloads/chicagoCrimes2001ToPresent.csv");
+      textFile = sc.textFile(Constants.HDFS_CRIMES_DIR);
+      //textFile = sc.textFile("/Users/mmuller/Downloads/chicagoCrimes2001ToPresent.csv");
 
       JavaRDD<String[]> fil = textFile.filter(CrimesHelper::isValidEntry)
             .map(Utils::splitCommaDelimitedString)
@@ -69,7 +69,7 @@ public class DayOfWeekConfidenceIntervalNotFullMoonInside extends Driver impleme
       List<String> writeMe = new ArrayList<>();
       writeMe.add("Day of Week Crime .95 Confidence Interval Not Full Moon Inside");
       writeMe.add("===========================================");
-      writeMe.add("These are normal days.  Crime Level Averages outside of Confidence Interval are Abnormal");
+      writeMe.add("These are normal inside days.  Crime Level Averages outside of Confidence Interval are Abnormal");
       writeMe.add("------------------------------------------------------------------------");
 
       for (String s : Constants.DAYS_OF_WEEK) {
