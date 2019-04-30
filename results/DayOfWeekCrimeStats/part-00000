@@ -6,6 +6,7 @@ Crime Percentage By Type on Corresponding Day of Week
 
 ============
 Sunday
+Total Number of Sundays: 952
 ============
 NON - CRIMINAL (2): 0.00
 RITUALISM (4): 0.00
@@ -80,6 +81,7 @@ Sunday,BATTERY,204249,22.49
 
 ============
 Monday
+Total Number of Mondays: 953
 ============
 NON - CRIMINAL (3): 0.00
 NON-CRIMINAL (SUBJECT SPECIFIED) (3): 0.00
@@ -156,6 +158,7 @@ Monday,THEFT,200280,21.75
 
 ============
 Tuesday
+Total Number of Tuesdays: 953
 ============
 RITUALISM (2): 0.00
 NON - CRIMINAL (6): 0.00
@@ -230,6 +233,7 @@ Tuesday,THEFT,199375,21.51
 
 ============
 Wednesday
+Total Number of Wednesdays: 953
 ============
 NON-CRIMINAL (SUBJECT SPECIFIED) (2): 0.00
 NON - CRIMINAL (8): 0.00
@@ -304,6 +308,7 @@ Wednesday,THEFT,201080,21.56
 
 ============
 Thursday
+Total Number of Thursdays: 953
 ============
 DOMESTIC VIOLENCE (1): 0.00
 RITUALISM (1): 0.00
@@ -382,6 +387,7 @@ Thursday,THEFT,198248,21.48
 
 ============
 Friday
+Total Number of Fridays: 953
 ============
 RITUALISM (3): 0.00
 NON - CRIMINAL (5): 0.00
@@ -456,6 +462,7 @@ Friday,THEFT,214174,21.85
 
 ============
 Saturday
+Total Number of Saturdays: 952
 ============
 RITUALISM (4): 0.00
 NON - CRIMINAL (5): 0.00

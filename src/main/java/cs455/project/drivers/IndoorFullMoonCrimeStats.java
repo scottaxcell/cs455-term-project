@@ -65,7 +65,7 @@ public class IndoorFullMoonCrimeStats extends Driver {
         saveStatisticsToFile(sc);
     }
 
-    private static boolean crimeOccurredIndoors(Broadcast<List<String>> indoorLocations, String[] split) {
+    static boolean crimeOccurredIndoors(Broadcast<List<String>> indoorLocations, String[] split) {
         return indoorLocations.value().contains(split[CrimesHelper.LOCATION_DESCRIPTION_INDEX]);
     }
 

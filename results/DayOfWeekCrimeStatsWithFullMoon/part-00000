@@ -4,6 +4,7 @@ Crime Percentage By Type Only on Full Moons on Corresponding Day of Week
 ------------------------------------------------------------------------
 ============
 Sunday
+Total Number of Sundays: 32
 ============
 NON-CRIMINAL (1): 0.00
 OBSCENITY (2): 0.01
@@ -68,6 +69,7 @@ Sunday,THEFT,5813,19.47
 Sunday,BATTERY,6585,22.06
 ============
 Monday
+Total Number of Mondays: 30
 ============
 OBSCENITY (1): 0.00
 OTHER NARCOTIC VIOLATION (1): 0.00
@@ -132,6 +134,7 @@ Monday,BATTERY,5099,17.09
 Monday,THEFT,6448,21.61
 ============
 Tuesday
+Total Number of Tuesdays: 33
 ============
 OBSCENITY (1): 0.00
 NON-CRIMINAL (1): 0.00
@@ -192,6 +195,7 @@ Tuesday,BATTERY,5165,16.15
 Tuesday,THEFT,6905,21.59
 ============
 Wednesday
+Total Number of Wednesdays: 35
 ============
 PUBLIC INDECENCY (1): 0.00
 OBSCENITY (1): 0.00
@@ -258,6 +262,7 @@ Wednesday,BATTERY,5648,16.60
 Wednesday,THEFT,7346,21.58
 ============
 Thursday
+Total Number of Thursdays: 30
 ============
 PUBLIC INDECENCY (1): 0.00
 NON-CRIMINAL (1): 0.00
@@ -320,6 +325,7 @@ Thursday,BATTERY,5086,17.19
 Thursday,THEFT,6339,21.43
 ============
 Friday
+Total Number of Fridays: 31
 ============
 PUBLIC INDECENCY (1): 0.00
 NON-CRIMINAL (1): 0.00
@@ -382,6 +388,7 @@ Friday,BATTERY,5255,16.71
 Friday,THEFT,6839,21.75
 ============
 Saturday
+Total Number of Saturdays: 35
 ============
 PUBLIC INDECENCY (1): 0.00
 RITUALISM (1): 0.00
