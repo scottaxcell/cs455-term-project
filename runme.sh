@@ -2,7 +2,7 @@
 
 PERSONAL_SPARK=phoenix:30318 # Scott's spark
 #PERSONAL_SPARK=topeka:50318 # Matt's spark
-
+#PERSONAL_SPARK=olympia:30318 # Daniel's spark
 
 gradle assemble
 
@@ -67,4 +67,25 @@ $SPARK_HOME/bin/spark-submit \
 --master spark://$PERSONAL_SPARK \
 --deploy-mode cluster \
 --class cs455.project.drivers.OutdoorNotFullMoonCrimeStats \
+--supervise build/libs/cs455TermProject.jar
+
+$HADOOP_HOME/bin/hdfs dfs -rm -r /user/${USER}/DayOfWeekCrimeStats
+$SPARK_HOME/bin/spark-submit \
+--master spark://$PERSONAL_SPARK \
+--deploy-mode cluster \
+--class cs455.project.drivers.DayOfWeekCrimeStats \
+--supervise build/libs/cs455TermProject.jar
+
+$HADOOP_HOME/bin/hdfs dfs -rm -r /user/${USER}/DayOfWeekCrimeStatsWithFullMoon
+$SPARK_HOME/bin/spark-submit \
+--master spark://$PERSONAL_SPARK \
+--deploy-mode cluster \
+--class cs455.project.drivers.DayOfWeekCrimeStatsWithFullMoon \
+--supervise build/libs/cs455TermProject.jar
+
+$HADOOP_HOME/bin/hdfs dfs -rm -r /user/${USER}/DayOfWeekNonFullMoonCrimeStats
+$SPARK_HOME/bin/spark-submit \
+--master spark://$PERSONAL_SPARK \
+--deploy-mode cluster \
+--class cs455.project.drivers.DayOfWeekNonFullMoonCrimeStats \
 --supervise build/libs/cs455TermProject.jar
