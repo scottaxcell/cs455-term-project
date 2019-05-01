@@ -1,0 +1,518 @@
+Day of Week Crime .95 Confidence Interval Not Full Moon Outside
+===========================================
+These are normal outside days.  Crime Level Averages outside of Confidence Interval are Abnormal
+------------------------------------------------------------------------
+============
+Sunday (Occurrences 922)
+============
+WEAPONS VIOLATION Occurrences 7470, Average 8.10 ± 4.32, .95 Confidence Interval 8.10 ± 0.28
+LIQUOR LAW VIOLATION Occurrences 1154, Average 1.25 ± 1.27, .95 Confidence Interval 1.25 ± 0.08
+OFFENSE INVOLVING CHILDREN Occurrences 1090, Average 1.18 ± 0.91, .95 Confidence Interval 1.18 ± 0.06
+CRIM SEXUAL ASSAULT Occurrences 1452, Average 1.57 ± 1.14, .95 Confidence Interval 1.57 ± 0.07
+NARCOTICS Occurrences 75779, Average 82.19 ± 36.70, .95 Confidence Interval 82.19 ± 2.37
+PUBLIC INDECENCY Occurrences 12, Average 0.01 ± 0.11, .95 Confidence Interval 0.01 ± 0.01
+CRIMINAL DAMAGE Occurrences 72430, Average 78.56 ± 27.39, .95 Confidence Interval 78.56 ± 1.77
+RITUALISM Occurrences 2, Average 0.00 ± 0.05, .95 Confidence Interval 0.00 ± 0.00
+DECEPTIVE PRACTICE Occurrences 9324, Average 10.11 ± 3.93, .95 Confidence Interval 10.11 ± 0.25
+OBSCENITY Occurrences 13, Average 0.01 ± 0.12, .95 Confidence Interval 0.01 ± 0.01
+ASSAULT Occurrences 29352, Average 31.84 ± 12.86, .95 Confidence Interval 31.84 ± 0.83
+MOTOR VEHICLE THEFT Occurrences 37214, Average 40.36 ± 14.70, .95 Confidence Interval 40.36 ± 0.95
+ARSON Occurrences 1147, Average 1.24 ± 1.04, .95 Confidence Interval 1.24 ± 0.07
+INTIMIDATION Occurrences 182, Average 0.20 ± 0.42, .95 Confidence Interval 0.20 ± 0.03
+THEFT Occurrences 102245, Average 110.89 ± 32.75, .95 Confidence Interval 110.89 ± 2.11
+BATTERY Occurrences 93062, Average 100.93 ± 42.98, .95 Confidence Interval 100.93 ± 2.77
+HOMICIDE Occurrences 1156, Average 1.25 ± 1.07, .95 Confidence Interval 1.25 ± 0.07
+HUMAN TRAFFICKING Occurrences 2, Average 0.00 ± 0.05, .95 Confidence Interval 0.00 ± 0.00
+ROBBERY Occurrences 31053, Average 33.68 ± 10.86, .95 Confidence Interval 33.68 ± 0.70
+PROSTITUTION Occurrences 5500, Average 5.97 ± 5.50, .95 Confidence Interval 5.97 ± 0.35
+SEX OFFENSE Occurrences 1368, Average 1.48 ± 1.20, .95 Confidence Interval 1.48 ± 0.08
+STALKING Occurrences 191, Average 0.21 ± 0.43, .95 Confidence Interval 0.21 ± 0.03
+CRIMINAL TRESPASS Occurrences 11434, Average 12.40 ± 5.23, .95 Confidence Interval 12.40 ± 0.34
+INTERFERENCE WITH PUBLIC OFFICER Occurrences 2110, Average 2.29 ± 1.69, .95 Confidence Interval 2.29 ± 0.11
+GAMBLING Occurrences 1644, Average 1.78 ± 1.80, .95 Confidence Interval 1.78 ± 0.12
+OTHER OFFENSE Occurrences 15786, Average 17.12 ± 5.59, .95 Confidence Interval 17.12 ± 0.36
+OTHER NARCOTIC VIOLATION Occurrences 15, Average 0.02 ± 0.13, .95 Confidence Interval 0.02 ± 0.01
+CONCEALED CARRY LICENSE VIOLATION Occurrences 36, Average 0.04 ± 0.21, .95 Confidence Interval 0.04 ± 0.01
+PUBLIC PEACE VIOLATION Occurrences 4498, Average 4.88 ± 3.22, .95 Confidence Interval 4.88 ± 0.21
+NON-CRIMINAL Occurrences 7, Average 0.01 ± 0.10, .95 Confidence Interval 0.01 ± 0.01
+BURGLARY Occurrences 12128, Average 13.15 ± 6.35, .95 Confidence Interval 13.15 ± 0.41
+KIDNAPPING Occurrences 398, Average 0.43 ± 0.60, .95 Confidence Interval 0.43 ± 0.04
+
+
+Day Of Week,Type,Number,Ave,StdDev,ConfIntv
+Sunday,WEAPONS VIOLATION,7470,8.10,4.32,0.28
+Sunday,LIQUOR LAW VIOLATION,1154,1.25,1.27,0.08
+Sunday,OFFENSE INVOLVING CHILDREN,1090,1.18,0.91,0.06
+Sunday,CRIM SEXUAL ASSAULT,1452,1.57,1.14,0.07
+Sunday,NARCOTICS,75779,82.19,36.70,2.37
+Sunday,PUBLIC INDECENCY,12,0.01,0.11,0.01
+Sunday,CRIMINAL DAMAGE,72430,78.56,27.39,1.77
+Sunday,RITUALISM,2,0.00,0.05,0.00
+Sunday,DECEPTIVE PRACTICE,9324,10.11,3.93,0.25
+Sunday,OBSCENITY,13,0.01,0.12,0.01
+Sunday,ASSAULT,29352,31.84,12.86,0.83
+Sunday,MOTOR VEHICLE THEFT,37214,40.36,14.70,0.95
+Sunday,ARSON,1147,1.24,1.04,0.07
+Sunday,INTIMIDATION,182,0.20,0.42,0.03
+Sunday,THEFT,102245,110.89,32.75,2.11
+Sunday,BATTERY,93062,100.93,42.98,2.77
+Sunday,HOMICIDE,1156,1.25,1.07,0.07
+Sunday,HUMAN TRAFFICKING,2,0.00,0.05,0.00
+Sunday,ROBBERY,31053,33.68,10.86,0.70
+Sunday,PROSTITUTION,5500,5.97,5.50,0.35
+Sunday,SEX OFFENSE,1368,1.48,1.20,0.08
+Sunday,STALKING,191,0.21,0.43,0.03
+Sunday,CRIMINAL TRESPASS,11434,12.40,5.23,0.34
+Sunday,INTERFERENCE WITH PUBLIC OFFICER,2110,2.29,1.69,0.11
+Sunday,GAMBLING,1644,1.78,1.80,0.12
+Sunday,OTHER OFFENSE,15786,17.12,5.59,0.36
+Sunday,OTHER NARCOTIC VIOLATION,15,0.02,0.13,0.01
+Sunday,CONCEALED CARRY LICENSE VIOLATION,36,0.04,0.21,0.01
+Sunday,PUBLIC PEACE VIOLATION,4498,4.88,3.22,0.21
+Sunday,NON-CRIMINAL,7,0.01,0.10,0.01
+Sunday,BURGLARY,12128,13.15,6.35,0.41
+Sunday,KIDNAPPING,398,0.43,0.60,0.04
+
+
+============
+Monday (Occurrences 925)
+============
+WEAPONS VIOLATION Occurrences 6779, Average 7.33 ± 3.88, .95 Confidence Interval 7.33 ± 0.25
+LIQUOR LAW VIOLATION Occurrences 856, Average 0.93 ± 1.05, .95 Confidence Interval 0.93 ± 0.07
+NON - CRIMINAL Occurrences 2, Average 0.00 ± 0.05, .95 Confidence Interval 0.00 ± 0.00
+OFFENSE INVOLVING CHILDREN Occurrences 825, Average 0.89 ± 0.79, .95 Confidence Interval 0.89 ± 0.05
+CRIM SEXUAL ASSAULT Occurrences 1214, Average 1.31 ± 0.96, .95 Confidence Interval 1.31 ± 0.06
+NARCOTICS Occurrences 84111, Average 90.93 ± 42.01, .95 Confidence Interval 90.93 ± 2.71
+PUBLIC INDECENCY Occurrences 12, Average 0.01 ± 0.11, .95 Confidence Interval 0.01 ± 0.01
+CRIMINAL DAMAGE Occurrences 62676, Average 67.76 ± 24.44, .95 Confidence Interval 67.76 ± 1.58
+RITUALISM Occurrences 4, Average 0.00 ± 0.07, .95 Confidence Interval 0.00 ± 0.00
+DECEPTIVE PRACTICE Occurrences 12277, Average 13.27 ± 4.28, .95 Confidence Interval 13.27 ± 0.28
+OBSCENITY Occurrences 19, Average 0.02 ± 0.14, .95 Confidence Interval 0.02 ± 0.01
+ASSAULT Occurrences 30674, Average 33.16 ± 12.90, .95 Confidence Interval 33.16 ± 0.83
+MOTOR VEHICLE THEFT Occurrences 37774, Average 40.84 ± 14.68, .95 Confidence Interval 40.84 ± 0.95
+ARSON Occurrences 957, Average 1.03 ± 0.91, .95 Confidence Interval 1.03 ± 0.06
+THEFT Occurrences 112639, Average 121.77 ± 34.21, .95 Confidence Interval 121.77 ± 2.20
+INTIMIDATION Occurrences 262, Average 0.28 ± 0.50, .95 Confidence Interval 0.28 ± 0.03
+BATTERY Occurrences 75441, Average 81.56 ± 35.49, .95 Confidence Interval 81.56 ± 2.29
+HOMICIDE Occurrences 827, Average 0.89 ± 0.88, .95 Confidence Interval 0.89 ± 0.06
+ROBBERY Occurrences 30697, Average 33.19 ± 10.34, .95 Confidence Interval 33.19 ± 0.67
+PROSTITUTION Occurrences 5603, Average 6.06 ± 5.61, .95 Confidence Interval 6.06 ± 0.36
+SEX OFFENSE Occurrences 1743, Average 1.88 ± 1.42, .95 Confidence Interval 1.88 ± 0.09
+STALKING Occurrences 259, Average 0.28 ± 0.52, .95 Confidence Interval 0.28 ± 0.03
+INTERFERENCE WITH PUBLIC OFFICER Occurrences 1916, Average 2.07 ± 1.55, .95 Confidence Interval 2.07 ± 0.10
+CRIMINAL TRESPASS Occurrences 13344, Average 14.43 ± 6.09, .95 Confidence Interval 14.43 ± 0.39
+GAMBLING Occurrences 1757, Average 1.90 ± 1.91, .95 Confidence Interval 1.90 ± 0.12
+OTHER OFFENSE Occurrences 17833, Average 19.28 ± 5.91, .95 Confidence Interval 19.28 ± 0.38
+OTHER NARCOTIC VIOLATION Occurrences 8, Average 0.01 ± 0.09, .95 Confidence Interval 0.01 ± 0.01
+CONCEALED CARRY LICENSE VIOLATION Occurrences 26, Average 0.03 ± 0.17, .95 Confidence Interval 0.03 ± 0.01
+PUBLIC PEACE VIOLATION Occurrences 4144, Average 4.48 ± 2.93, .95 Confidence Interval 4.48 ± 0.19
+NON-CRIMINAL Occurrences 12, Average 0.01 ± 0.12, .95 Confidence Interval 0.01 ± 0.01
+NON-CRIMINAL (SUBJECT SPECIFIED) Occurrences 1, Average 0.00 ± 0.03, .95 Confidence Interval 0.00 ± 0.00
+KIDNAPPING Occurrences 575, Average 0.62 ± 0.70, .95 Confidence Interval 0.62 ± 0.04
+BURGLARY Occurrences 13921, Average 15.05 ± 7.25, .95 Confidence Interval 15.05 ± 0.47
+
+
+Day Of Week,Type,Number,Ave,StdDev,ConfIntv
+Monday,WEAPONS VIOLATION,6779,7.33,3.88,0.25
+Monday,LIQUOR LAW VIOLATION,856,0.93,1.05,0.07
+Monday,NON - CRIMINAL,2,0.00,0.05,0.00
+Monday,OFFENSE INVOLVING CHILDREN,825,0.89,0.79,0.05
+Monday,CRIM SEXUAL ASSAULT,1214,1.31,0.96,0.06
+Monday,NARCOTICS,84111,90.93,42.01,2.71
+Monday,PUBLIC INDECENCY,12,0.01,0.11,0.01
+Monday,CRIMINAL DAMAGE,62676,67.76,24.44,1.58
+Monday,RITUALISM,4,0.00,0.07,0.00
+Monday,DECEPTIVE PRACTICE,12277,13.27,4.28,0.28
+Monday,OBSCENITY,19,0.02,0.14,0.01
+Monday,ASSAULT,30674,33.16,12.90,0.83
+Monday,MOTOR VEHICLE THEFT,37774,40.84,14.68,0.95
+Monday,ARSON,957,1.03,0.91,0.06
+Monday,THEFT,112639,121.77,34.21,2.20
+Monday,INTIMIDATION,262,0.28,0.50,0.03
+Monday,BATTERY,75441,81.56,35.49,2.29
+Monday,HOMICIDE,827,0.89,0.88,0.06
+Monday,ROBBERY,30697,33.19,10.34,0.67
+Monday,PROSTITUTION,5603,6.06,5.61,0.36
+Monday,SEX OFFENSE,1743,1.88,1.42,0.09
+Monday,STALKING,259,0.28,0.52,0.03
+Monday,INTERFERENCE WITH PUBLIC OFFICER,1916,2.07,1.55,0.10
+Monday,CRIMINAL TRESPASS,13344,14.43,6.09,0.39
+Monday,GAMBLING,1757,1.90,1.91,0.12
+Monday,OTHER OFFENSE,17833,19.28,5.91,0.38
+Monday,OTHER NARCOTIC VIOLATION,8,0.01,0.09,0.01
+Monday,CONCEALED CARRY LICENSE VIOLATION,26,0.03,0.17,0.01
+Monday,PUBLIC PEACE VIOLATION,4144,4.48,2.93,0.19
+Monday,NON-CRIMINAL,12,0.01,0.12,0.01
+Monday,NON-CRIMINAL (SUBJECT SPECIFIED),1,0.00,0.03,0.00
+Monday,KIDNAPPING,575,0.62,0.70,0.04
+Monday,BURGLARY,13921,15.05,7.25,0.47
+
+
+============
+Tuesday (Occurrences 922)
+============
+WEAPONS VIOLATION Occurrences 7107, Average 7.71 ± 3.79, .95 Confidence Interval 7.71 ± 0.24
+LIQUOR LAW VIOLATION Occurrences 913, Average 0.99 ± 1.12, .95 Confidence Interval 0.99 ± 0.07
+NON - CRIMINAL Occurrences 2, Average 0.00 ± 0.05, .95 Confidence Interval 0.00 ± 0.00
+OFFENSE INVOLVING CHILDREN Occurrences 774, Average 0.84 ± 0.79, .95 Confidence Interval 0.84 ± 0.05
+CRIM SEXUAL ASSAULT Occurrences 1133, Average 1.23 ± 0.95, .95 Confidence Interval 1.23 ± 0.06
+NARCOTICS Occurrences 90400, Average 98.05 ± 46.25, .95 Confidence Interval 98.05 ± 2.99
+PUBLIC INDECENCY Occurrences 15, Average 0.02 ± 0.13, .95 Confidence Interval 0.02 ± 0.01
+CRIMINAL DAMAGE Occurrences 60618, Average 65.75 ± 24.59, .95 Confidence Interval 65.75 ± 1.59
+DECEPTIVE PRACTICE Occurrences 12970, Average 14.07 ± 4.34, .95 Confidence Interval 14.07 ± 0.28
+OBSCENITY Occurrences 29, Average 0.03 ± 0.18, .95 Confidence Interval 0.03 ± 0.01
+ASSAULT Occurrences 31415, Average 34.07 ± 13.04, .95 Confidence Interval 34.07 ± 0.84
+ARSON Occurrences 909, Average 0.99 ± 0.95, .95 Confidence Interval 0.99 ± 0.06
+MOTOR VEHICLE THEFT Occurrences 36872, Average 39.99 ± 14.31, .95 Confidence Interval 39.99 ± 0.92
+THEFT Occurrences 111731, Average 121.18 ± 34.10, .95 Confidence Interval 121.18 ± 2.20
+INTIMIDATION Occurrences 264, Average 0.29 ± 0.48, .95 Confidence Interval 0.29 ± 0.03
+BATTERY Occurrences 74907, Average 81.24 ± 35.33, .95 Confidence Interval 81.24 ± 2.28
+HOMICIDE Occurrences 784, Average 0.85 ± 0.85, .95 Confidence Interval 0.85 ± 0.06
+HUMAN TRAFFICKING Occurrences 4, Average 0.00 ± 0.07, .95 Confidence Interval 0.00 ± 0.00
+ROBBERY Occurrences 29837, Average 32.36 ± 10.34, .95 Confidence Interval 32.36 ± 0.67
+PROSTITUTION Occurrences 10799, Average 11.71 ± 7.91, .95 Confidence Interval 11.71 ± 0.51
+SEX OFFENSE Occurrences 1772, Average 1.92 ± 1.53, .95 Confidence Interval 1.92 ± 0.10
+STALKING Occurrences 264, Average 0.29 ± 0.50, .95 Confidence Interval 0.29 ± 0.03
+INTERFERENCE WITH PUBLIC OFFICER Occurrences 1877, Average 2.04 ± 1.55, .95 Confidence Interval 2.04 ± 0.10
+CRIMINAL TRESPASS Occurrences 13749, Average 14.91 ± 6.45, .95 Confidence Interval 14.91 ± 0.42
+GAMBLING Occurrences 1805, Average 1.96 ± 1.99, .95 Confidence Interval 1.96 ± 0.13
+OTHER OFFENSE Occurrences 18083, Average 19.61 ± 5.77, .95 Confidence Interval 19.61 ± 0.37
+CONCEALED CARRY LICENSE VIOLATION Occurrences 16, Average 0.02 ± 0.15, .95 Confidence Interval 0.02 ± 0.01
+OTHER NARCOTIC VIOLATION Occurrences 14, Average 0.02 ± 0.12, .95 Confidence Interval 0.02 ± 0.01
+PUBLIC PEACE VIOLATION Occurrences 4323, Average 4.69 ± 2.94, .95 Confidence Interval 4.69 ± 0.19
+NON-CRIMINAL Occurrences 12, Average 0.01 ± 0.11, .95 Confidence Interval 0.01 ± 0.01
+KIDNAPPING Occurrences 618, Average 0.67 ± 0.67, .95 Confidence Interval 0.67 ± 0.04
+BURGLARY Occurrences 13597, Average 14.75 ± 6.81, .95 Confidence Interval 14.75 ± 0.44
+
+
+Day Of Week,Type,Number,Ave,StdDev,ConfIntv
+Tuesday,WEAPONS VIOLATION,7107,7.71,3.79,0.24
+Tuesday,LIQUOR LAW VIOLATION,913,0.99,1.12,0.07
+Tuesday,NON - CRIMINAL,2,0.00,0.05,0.00
+Tuesday,OFFENSE INVOLVING CHILDREN,774,0.84,0.79,0.05
+Tuesday,CRIM SEXUAL ASSAULT,1133,1.23,0.95,0.06
+Tuesday,NARCOTICS,90400,98.05,46.25,2.99
+Tuesday,PUBLIC INDECENCY,15,0.02,0.13,0.01
+Tuesday,CRIMINAL DAMAGE,60618,65.75,24.59,1.59
+Tuesday,DECEPTIVE PRACTICE,12970,14.07,4.34,0.28
+Tuesday,OBSCENITY,29,0.03,0.18,0.01
+Tuesday,ASSAULT,31415,34.07,13.04,0.84
+Tuesday,ARSON,909,0.99,0.95,0.06
+Tuesday,MOTOR VEHICLE THEFT,36872,39.99,14.31,0.92
+Tuesday,THEFT,111731,121.18,34.10,2.20
+Tuesday,INTIMIDATION,264,0.29,0.48,0.03
+Tuesday,BATTERY,74907,81.24,35.33,2.28
+Tuesday,HOMICIDE,784,0.85,0.85,0.06
+Tuesday,HUMAN TRAFFICKING,4,0.00,0.07,0.00
+Tuesday,ROBBERY,29837,32.36,10.34,0.67
+Tuesday,PROSTITUTION,10799,11.71,7.91,0.51
+Tuesday,SEX OFFENSE,1772,1.92,1.53,0.10
+Tuesday,STALKING,264,0.29,0.50,0.03
+Tuesday,INTERFERENCE WITH PUBLIC OFFICER,1877,2.04,1.55,0.10
+Tuesday,CRIMINAL TRESPASS,13749,14.91,6.45,0.42
+Tuesday,GAMBLING,1805,1.96,1.99,0.13
+Tuesday,OTHER OFFENSE,18083,19.61,5.77,0.37
+Tuesday,CONCEALED CARRY LICENSE VIOLATION,16,0.02,0.15,0.01
+Tuesday,OTHER NARCOTIC VIOLATION,14,0.02,0.12,0.01
+Tuesday,PUBLIC PEACE VIOLATION,4323,4.69,2.94,0.19
+Tuesday,NON-CRIMINAL,12,0.01,0.11,0.01
+Tuesday,KIDNAPPING,618,0.67,0.67,0.04
+Tuesday,BURGLARY,13597,14.75,6.81,0.44
+
+
+============
+Wednesday (Occurrences 920)
+============
+WEAPONS VIOLATION Occurrences 6886, Average 7.48 ± 3.76, .95 Confidence Interval 7.48 ± 0.24
+LIQUOR LAW VIOLATION Occurrences 1033, Average 1.12 ± 1.13, .95 Confidence Interval 1.12 ± 0.07
+NON - CRIMINAL Occurrences 3, Average 0.00 ± 0.06, .95 Confidence Interval 0.00 ± 0.00
+OFFENSE INVOLVING CHILDREN Occurrences 848, Average 0.92 ± 0.76, .95 Confidence Interval 0.92 ± 0.05
+CRIM SEXUAL ASSAULT Occurrences 1093, Average 1.19 ± 0.93, .95 Confidence Interval 1.19 ± 0.06
+NARCOTICS Occurrences 90801, Average 98.70 ± 45.97, .95 Confidence Interval 98.70 ± 2.97
+PUBLIC INDECENCY Occurrences 12, Average 0.01 ± 0.11, .95 Confidence Interval 0.01 ± 0.01
+CRIMINAL DAMAGE Occurrences 61506, Average 66.85 ± 24.25, .95 Confidence Interval 66.85 ± 1.57
+DECEPTIVE PRACTICE Occurrences 13052, Average 14.19 ± 4.68, .95 Confidence Interval 14.19 ± 0.30
+OBSCENITY Occurrences 19, Average 0.02 ± 0.16, .95 Confidence Interval 0.02 ± 0.01
+ASSAULT Occurrences 31639, Average 34.39 ± 12.85, .95 Confidence Interval 34.39 ± 0.83
+MOTOR VEHICLE THEFT Occurrences 37457, Average 40.71 ± 14.80, .95 Confidence Interval 40.71 ± 0.96
+ARSON Occurrences 910, Average 0.99 ± 0.98, .95 Confidence Interval 0.99 ± 0.06
+THEFT Occurrences 112224, Average 121.98 ± 34.58, .95 Confidence Interval 121.98 ± 2.23
+INTIMIDATION Occurrences 256, Average 0.28 ± 0.48, .95 Confidence Interval 0.28 ± 0.03
+BATTERY Occurrences 74864, Average 81.37 ± 34.72, .95 Confidence Interval 81.37 ± 2.24
+HOMICIDE Occurrences 780, Average 0.85 ± 0.88, .95 Confidence Interval 0.85 ± 0.06
+HUMAN TRAFFICKING Occurrences 1, Average 0.00 ± 0.03, .95 Confidence Interval 0.00 ± 0.00
+ROBBERY Occurrences 29655, Average 32.23 ± 9.84, .95 Confidence Interval 32.23 ± 0.64
+PROSTITUTION Occurrences 11209, Average 12.18 ± 8.58, .95 Confidence Interval 12.18 ± 0.55
+SEX OFFENSE Occurrences 1711, Average 1.86 ± 1.44, .95 Confidence Interval 1.86 ± 0.09
+STALKING Occurrences 267, Average 0.29 ± 0.48, .95 Confidence Interval 0.29 ± 0.03
+CRIMINAL TRESPASS Occurrences 13907, Average 15.12 ± 6.56, .95 Confidence Interval 15.12 ± 0.42
+INTERFERENCE WITH PUBLIC OFFICER Occurrences 1930, Average 2.10 ± 1.50, .95 Confidence Interval 2.10 ± 0.10
+GAMBLING Occurrences 1819, Average 1.98 ± 1.89, .95 Confidence Interval 1.98 ± 0.12
+OTHER OFFENSE Occurrences 17831, Average 19.38 ± 5.84, .95 Confidence Interval 19.38 ± 0.38
+OTHER NARCOTIC VIOLATION Occurrences 8, Average 0.01 ± 0.09, .95 Confidence Interval 0.01 ± 0.01
+CONCEALED CARRY LICENSE VIOLATION Occurrences 16, Average 0.02 ± 0.14, .95 Confidence Interval 0.02 ± 0.01
+PUBLIC PEACE VIOLATION Occurrences 4382, Average 4.76 ± 2.98, .95 Confidence Interval 4.76 ± 0.19
+NON-CRIMINAL Occurrences 12, Average 0.01 ± 0.11, .95 Confidence Interval 0.01 ± 0.01
+NON-CRIMINAL (SUBJECT SPECIFIED) Occurrences 1, Average 0.00 ± 0.03, .95 Confidence Interval 0.00 ± 0.00
+BURGLARY Occurrences 13666, Average 14.85 ± 6.94, .95 Confidence Interval 14.85 ± 0.45
+KIDNAPPING Occurrences 619, Average 0.67 ± 0.71, .95 Confidence Interval 0.67 ± 0.05
+
+
+Day Of Week,Type,Number,Ave,StdDev,ConfIntv
+Wednesday,WEAPONS VIOLATION,6886,7.48,3.76,0.24
+Wednesday,LIQUOR LAW VIOLATION,1033,1.12,1.13,0.07
+Wednesday,NON - CRIMINAL,3,0.00,0.06,0.00
+Wednesday,OFFENSE INVOLVING CHILDREN,848,0.92,0.76,0.05
+Wednesday,CRIM SEXUAL ASSAULT,1093,1.19,0.93,0.06
+Wednesday,NARCOTICS,90801,98.70,45.97,2.97
+Wednesday,PUBLIC INDECENCY,12,0.01,0.11,0.01
+Wednesday,CRIMINAL DAMAGE,61506,66.85,24.25,1.57
+Wednesday,DECEPTIVE PRACTICE,13052,14.19,4.68,0.30
+Wednesday,OBSCENITY,19,0.02,0.16,0.01
+Wednesday,ASSAULT,31639,34.39,12.85,0.83
+Wednesday,MOTOR VEHICLE THEFT,37457,40.71,14.80,0.96
+Wednesday,ARSON,910,0.99,0.98,0.06
+Wednesday,THEFT,112224,121.98,34.58,2.23
+Wednesday,INTIMIDATION,256,0.28,0.48,0.03
+Wednesday,BATTERY,74864,81.37,34.72,2.24
+Wednesday,HOMICIDE,780,0.85,0.88,0.06
+Wednesday,HUMAN TRAFFICKING,1,0.00,0.03,0.00
+Wednesday,ROBBERY,29655,32.23,9.84,0.64
+Wednesday,PROSTITUTION,11209,12.18,8.58,0.55
+Wednesday,SEX OFFENSE,1711,1.86,1.44,0.09
+Wednesday,STALKING,267,0.29,0.48,0.03
+Wednesday,CRIMINAL TRESPASS,13907,15.12,6.56,0.42
+Wednesday,INTERFERENCE WITH PUBLIC OFFICER,1930,2.10,1.50,0.10
+Wednesday,GAMBLING,1819,1.98,1.89,0.12
+Wednesday,OTHER OFFENSE,17831,19.38,5.84,0.38
+Wednesday,OTHER NARCOTIC VIOLATION,8,0.01,0.09,0.01
+Wednesday,CONCEALED CARRY LICENSE VIOLATION,16,0.02,0.14,0.01
+Wednesday,PUBLIC PEACE VIOLATION,4382,4.76,2.98,0.19
+Wednesday,NON-CRIMINAL,12,0.01,0.11,0.01
+Wednesday,NON-CRIMINAL (SUBJECT SPECIFIED),1,0.00,0.03,0.00
+Wednesday,BURGLARY,13666,14.85,6.94,0.45
+Wednesday,KIDNAPPING,619,0.67,0.71,0.05
+
+
+============
+Thursday (Occurrences 925)
+============
+WEAPONS VIOLATION Occurrences 6841, Average 7.40 ± 3.90, .95 Confidence Interval 7.40 ± 0.25
+LIQUOR LAW VIOLATION Occurrences 946, Average 1.02 ± 1.13, .95 Confidence Interval 1.02 ± 0.07
+NON - CRIMINAL Occurrences 6, Average 0.01 ± 0.08, .95 Confidence Interval 0.01 ± 0.01
+CRIM SEXUAL ASSAULT Occurrences 1115, Average 1.21 ± 0.91, .95 Confidence Interval 1.21 ± 0.06
+OFFENSE INVOLVING CHILDREN Occurrences 851, Average 0.92 ± 0.82, .95 Confidence Interval 0.92 ± 0.05
+NARCOTICS Occurrences 90942, Average 98.32 ± 51.09, .95 Confidence Interval 98.32 ± 3.29
+PUBLIC INDECENCY Occurrences 11, Average 0.01 ± 0.12, .95 Confidence Interval 0.01 ± 0.01
+CRIMINAL DAMAGE Occurrences 61693, Average 66.70 ± 23.71, .95 Confidence Interval 66.70 ± 1.53
+DECEPTIVE PRACTICE Occurrences 13024, Average 14.08 ± 4.53, .95 Confidence Interval 14.08 ± 0.29
+OBSCENITY Occurrences 20, Average 0.02 ± 0.14, .95 Confidence Interval 0.02 ± 0.01
+ASSAULT Occurrences 30873, Average 33.38 ± 12.15, .95 Confidence Interval 33.38 ± 0.78
+MOTOR VEHICLE THEFT Occurrences 37671, Average 40.73 ± 14.43, .95 Confidence Interval 40.73 ± 0.93
+ARSON Occurrences 848, Average 0.92 ± 0.88, .95 Confidence Interval 0.92 ± 0.06
+THEFT Occurrences 110861, Average 119.85 ± 33.78, .95 Confidence Interval 119.85 ± 2.18
+INTIMIDATION Occurrences 238, Average 0.26 ± 0.46, .95 Confidence Interval 0.26 ± 0.03
+BATTERY Occurrences 75148, Average 81.24 ± 34.47, .95 Confidence Interval 81.24 ± 2.22
+HOMICIDE Occurrences 792, Average 0.86 ± 0.86, .95 Confidence Interval 0.86 ± 0.06
+HUMAN TRAFFICKING Occurrences 4, Average 0.00 ± 0.07, .95 Confidence Interval 0.00 ± 0.00
+ROBBERY Occurrences 29471, Average 31.86 ± 10.23, .95 Confidence Interval 31.86 ± 0.66
+PROSTITUTION Occurrences 11116, Average 12.02 ± 8.84, .95 Confidence Interval 12.02 ± 0.57
+SEX OFFENSE Occurrences 1712, Average 1.85 ± 1.45, .95 Confidence Interval 1.85 ± 0.09
+STALKING Occurrences 249, Average 0.27 ± 0.47, .95 Confidence Interval 0.27 ± 0.03
+CRIMINAL TRESPASS Occurrences 13250, Average 14.32 ± 6.11, .95 Confidence Interval 14.32 ± 0.39
+INTERFERENCE WITH PUBLIC OFFICER Occurrences 1898, Average 2.05 ± 1.58, .95 Confidence Interval 2.05 ± 0.10
+GAMBLING Occurrences 1765, Average 1.91 ± 1.92, .95 Confidence Interval 1.91 ± 0.12
+OTHER OFFENSE Occurrences 17407, Average 18.82 ± 5.50, .95 Confidence Interval 18.82 ± 0.35
+CONCEALED CARRY LICENSE VIOLATION Occurrences 25, Average 0.03 ± 0.17, .95 Confidence Interval 0.03 ± 0.01
+OTHER NARCOTIC VIOLATION Occurrences 18, Average 0.02 ± 0.14, .95 Confidence Interval 0.02 ± 0.01
+PUBLIC PEACE VIOLATION Occurrences 4124, Average 4.46 ± 2.90, .95 Confidence Interval 4.46 ± 0.19
+NON-CRIMINAL Occurrences 7, Average 0.01 ± 0.09, .95 Confidence Interval 0.01 ± 0.01
+NON-CRIMINAL (SUBJECT SPECIFIED) Occurrences 1, Average 0.00 ± 0.03, .95 Confidence Interval 0.00 ± 0.00
+BURGLARY Occurrences 13417, Average 14.50 ± 6.86, .95 Confidence Interval 14.50 ± 0.44
+KIDNAPPING Occurrences 594, Average 0.64 ± 0.73, .95 Confidence Interval 0.64 ± 0.05
+
+
+Day Of Week,Type,Number,Ave,StdDev,ConfIntv
+Thursday,WEAPONS VIOLATION,6841,7.40,3.90,0.25
+Thursday,LIQUOR LAW VIOLATION,946,1.02,1.13,0.07
+Thursday,NON - CRIMINAL,6,0.01,0.08,0.01
+Thursday,CRIM SEXUAL ASSAULT,1115,1.21,0.91,0.06
+Thursday,OFFENSE INVOLVING CHILDREN,851,0.92,0.82,0.05
+Thursday,NARCOTICS,90942,98.32,51.09,3.29
+Thursday,PUBLIC INDECENCY,11,0.01,0.12,0.01
+Thursday,CRIMINAL DAMAGE,61693,66.70,23.71,1.53
+Thursday,DECEPTIVE PRACTICE,13024,14.08,4.53,0.29
+Thursday,OBSCENITY,20,0.02,0.14,0.01
+Thursday,ASSAULT,30873,33.38,12.15,0.78
+Thursday,MOTOR VEHICLE THEFT,37671,40.73,14.43,0.93
+Thursday,ARSON,848,0.92,0.88,0.06
+Thursday,THEFT,110861,119.85,33.78,2.18
+Thursday,INTIMIDATION,238,0.26,0.46,0.03
+Thursday,BATTERY,75148,81.24,34.47,2.22
+Thursday,HOMICIDE,792,0.86,0.86,0.06
+Thursday,HUMAN TRAFFICKING,4,0.00,0.07,0.00
+Thursday,ROBBERY,29471,31.86,10.23,0.66
+Thursday,PROSTITUTION,11116,12.02,8.84,0.57
+Thursday,SEX OFFENSE,1712,1.85,1.45,0.09
+Thursday,STALKING,249,0.27,0.47,0.03
+Thursday,CRIMINAL TRESPASS,13250,14.32,6.11,0.39
+Thursday,INTERFERENCE WITH PUBLIC OFFICER,1898,2.05,1.58,0.10
+Thursday,GAMBLING,1765,1.91,1.92,0.12
+Thursday,OTHER OFFENSE,17407,18.82,5.50,0.35
+Thursday,CONCEALED CARRY LICENSE VIOLATION,25,0.03,0.17,0.01
+Thursday,OTHER NARCOTIC VIOLATION,18,0.02,0.14,0.01
+Thursday,PUBLIC PEACE VIOLATION,4124,4.46,2.90,0.19
+Thursday,NON-CRIMINAL,7,0.01,0.09,0.01
+Thursday,NON-CRIMINAL (SUBJECT SPECIFIED),1,0.00,0.03,0.00
+Thursday,BURGLARY,13417,14.50,6.86,0.44
+Thursday,KIDNAPPING,594,0.64,0.73,0.05
+
+
+============
+Friday (Occurrences 923)
+============
+WEAPONS VIOLATION Occurrences 7513, Average 8.14 ± 3.91, .95 Confidence Interval 8.14 ± 0.25
+LIQUOR LAW VIOLATION Occurrences 1466, Average 1.59 ± 1.55, .95 Confidence Interval 1.59 ± 0.10
+NON - CRIMINAL Occurrences 3, Average 0.00 ± 0.06, .95 Confidence Interval 0.00 ± 0.00
+CRIM SEXUAL ASSAULT Occurrences 1160, Average 1.26 ± 0.98, .95 Confidence Interval 1.26 ± 0.06
+OFFENSE INVOLVING CHILDREN Occurrences 1363, Average 1.48 ± 0.98, .95 Confidence Interval 1.48 ± 0.06
+NARCOTICS Occurrences 93800, Average 101.63 ± 47.20, .95 Confidence Interval 101.63 ± 3.05
+PUBLIC INDECENCY Occurrences 12, Average 0.01 ± 0.11, .95 Confidence Interval 0.01 ± 0.01
+CRIMINAL DAMAGE Occurrences 68695, Average 74.43 ± 26.59, .95 Confidence Interval 74.43 ± 1.72
+RITUALISM Occurrences 1, Average 0.00 ± 0.03, .95 Confidence Interval 0.00 ± 0.00
+DECEPTIVE PRACTICE Occurrences 13832, Average 14.99 ± 4.51, .95 Confidence Interval 14.99 ± 0.29
+OBSCENITY Occurrences 13, Average 0.01 ± 0.12, .95 Confidence Interval 0.01 ± 0.01
+ASSAULT Occurrences 30915, Average 33.49 ± 12.34, .95 Confidence Interval 33.49 ± 0.80
+MOTOR VEHICLE THEFT Occurrences 40364, Average 43.73 ± 14.87, .95 Confidence Interval 43.73 ± 0.96
+ARSON Occurrences 915, Average 0.99 ± 0.93, .95 Confidence Interval 0.99 ± 0.06
+THEFT Occurrences 118297, Average 128.17 ± 34.07, .95 Confidence Interval 128.17 ± 2.20
+INTIMIDATION Occurrences 229, Average 0.25 ± 0.48, .95 Confidence Interval 0.25 ± 0.03
+BATTERY Occurrences 80858, Average 87.60 ± 35.60, .95 Confidence Interval 87.60 ± 2.30
+HOMICIDE Occurrences 824, Average 0.89 ± 0.85, .95 Confidence Interval 0.89 ± 0.05
+HUMAN TRAFFICKING Occurrences 1, Average 0.00 ± 0.03, .95 Confidence Interval 0.00 ± 0.00
+ROBBERY Occurrences 31844, Average 34.50 ± 10.95, .95 Confidence Interval 34.50 ± 0.71
+PROSTITUTION Occurrences 10706, Average 11.60 ± 9.65, .95 Confidence Interval 11.60 ± 0.62
+SEX OFFENSE Occurrences 1646, Average 1.78 ± 1.43, .95 Confidence Interval 1.78 ± 0.09
+STALKING Occurrences 247, Average 0.27 ± 0.49, .95 Confidence Interval 0.27 ± 0.03
+CRIMINAL TRESPASS Occurrences 12915, Average 13.99 ± 5.80, .95 Confidence Interval 13.99 ± 0.37
+INTERFERENCE WITH PUBLIC OFFICER Occurrences 1947, Average 2.11 ± 1.52, .95 Confidence Interval 2.11 ± 0.10
+GAMBLING Occurrences 1957, Average 2.12 ± 2.10, .95 Confidence Interval 2.12 ± 0.14
+OTHER OFFENSE Occurrences 18124, Average 19.64 ± 5.73, .95 Confidence Interval 19.64 ± 0.37
+OTHER NARCOTIC VIOLATION Occurrences 8, Average 0.01 ± 0.09, .95 Confidence Interval 0.01 ± 0.01
+CONCEALED CARRY LICENSE VIOLATION Occurrences 40, Average 0.04 ± 0.23, .95 Confidence Interval 0.04 ± 0.02
+PUBLIC PEACE VIOLATION Occurrences 4862, Average 5.27 ± 3.24, .95 Confidence Interval 5.27 ± 0.21
+NON-CRIMINAL Occurrences 19, Average 0.02 ± 0.14, .95 Confidence Interval 0.02 ± 0.01
+BURGLARY Occurrences 14050, Average 15.22 ± 7.15, .95 Confidence Interval 15.22 ± 0.46
+KIDNAPPING Occurrences 657, Average 0.71 ± 0.79, .95 Confidence Interval 0.71 ± 0.05
+
+
+Day Of Week,Type,Number,Ave,StdDev,ConfIntv
+Friday,WEAPONS VIOLATION,7513,8.14,3.91,0.25
+Friday,LIQUOR LAW VIOLATION,1466,1.59,1.55,0.10
+Friday,NON - CRIMINAL,3,0.00,0.06,0.00
+Friday,CRIM SEXUAL ASSAULT,1160,1.26,0.98,0.06
+Friday,OFFENSE INVOLVING CHILDREN,1363,1.48,0.98,0.06
+Friday,NARCOTICS,93800,101.63,47.20,3.05
+Friday,PUBLIC INDECENCY,12,0.01,0.11,0.01
+Friday,CRIMINAL DAMAGE,68695,74.43,26.59,1.72
+Friday,RITUALISM,1,0.00,0.03,0.00
+Friday,DECEPTIVE PRACTICE,13832,14.99,4.51,0.29
+Friday,OBSCENITY,13,0.01,0.12,0.01
+Friday,ASSAULT,30915,33.49,12.34,0.80
+Friday,MOTOR VEHICLE THEFT,40364,43.73,14.87,0.96
+Friday,ARSON,915,0.99,0.93,0.06
+Friday,THEFT,118297,128.17,34.07,2.20
+Friday,INTIMIDATION,229,0.25,0.48,0.03
+Friday,BATTERY,80858,87.60,35.60,2.30
+Friday,HOMICIDE,824,0.89,0.85,0.05
+Friday,HUMAN TRAFFICKING,1,0.00,0.03,0.00
+Friday,ROBBERY,31844,34.50,10.95,0.71
+Friday,PROSTITUTION,10706,11.60,9.65,0.62
+Friday,SEX OFFENSE,1646,1.78,1.43,0.09
+Friday,STALKING,247,0.27,0.49,0.03
+Friday,CRIMINAL TRESPASS,12915,13.99,5.80,0.37
+Friday,INTERFERENCE WITH PUBLIC OFFICER,1947,2.11,1.52,0.10
+Friday,GAMBLING,1957,2.12,2.10,0.14
+Friday,OTHER OFFENSE,18124,19.64,5.73,0.37
+Friday,OTHER NARCOTIC VIOLATION,8,0.01,0.09,0.01
+Friday,CONCEALED CARRY LICENSE VIOLATION,40,0.04,0.23,0.02
+Friday,PUBLIC PEACE VIOLATION,4862,5.27,3.24,0.21
+Friday,NON-CRIMINAL,19,0.02,0.14,0.01
+Friday,BURGLARY,14050,15.22,7.15,0.46
+Friday,KIDNAPPING,657,0.71,0.79,0.05
+
+
+============
+Saturday (Occurrences 920)
+============
+WEAPONS VIOLATION Occurrences 8155, Average 8.86 ± 4.31, .95 Confidence Interval 8.86 ± 0.28
+LIQUOR LAW VIOLATION Occurrences 1518, Average 1.65 ± 1.52, .95 Confidence Interval 1.65 ± 0.10
+NON - CRIMINAL Occurrences 4, Average 0.00 ± 0.07, .95 Confidence Interval 0.00 ± 0.00
+CRIM SEXUAL ASSAULT Occurrences 1386, Average 1.51 ± 1.08, .95 Confidence Interval 1.51 ± 0.07
+OFFENSE INVOLVING CHILDREN Occurrences 1176, Average 1.28 ± 0.97, .95 Confidence Interval 1.28 ± 0.06
+NARCOTICS Occurrences 86062, Average 93.55 ± 44.37, .95 Confidence Interval 93.55 ± 2.87
+PUBLIC INDECENCY Occurrences 15, Average 0.02 ± 0.13, .95 Confidence Interval 0.02 ± 0.01
+CRIMINAL DAMAGE Occurrences 73422, Average 79.81 ± 26.85, .95 Confidence Interval 79.81 ± 1.74
+RITUALISM Occurrences 1, Average 0.00 ± 0.03, .95 Confidence Interval 0.00 ± 0.00
+DECEPTIVE PRACTICE Occurrences 11487, Average 12.49 ± 4.36, .95 Confidence Interval 12.49 ± 0.28
+OBSCENITY Occurrences 15, Average 0.02 ± 0.13, .95 Confidence Interval 0.02 ± 0.01
+ASSAULT Occurrences 30065, Average 32.68 ± 12.67, .95 Confidence Interval 32.68 ± 0.82
+MOTOR VEHICLE THEFT Occurrences 37927, Average 41.22 ± 14.74, .95 Confidence Interval 41.22 ± 0.95
+ARSON Occurrences 1099, Average 1.19 ± 0.96, .95 Confidence Interval 1.19 ± 0.06
+THEFT Occurrences 109716, Average 119.26 ± 33.32, .95 Confidence Interval 119.26 ± 2.15
+INTIMIDATION Occurrences 156, Average 0.17 ± 0.39, .95 Confidence Interval 0.17 ± 0.03
+BATTERY Occurrences 89995, Average 97.82 ± 39.89, .95 Confidence Interval 97.82 ± 2.58
+HOMICIDE Occurrences 1083, Average 1.18 ± 0.94, .95 Confidence Interval 1.18 ± 0.06
+HUMAN TRAFFICKING Occurrences 2, Average 0.00 ± 0.05, .95 Confidence Interval 0.00 ± 0.00
+ROBBERY Occurrences 32056, Average 34.84 ± 11.03, .95 Confidence Interval 34.84 ± 0.71
+PROSTITUTION Occurrences 7999, Average 8.69 ± 7.10, .95 Confidence Interval 8.69 ± 0.46
+SEX OFFENSE Occurrences 1390, Average 1.51 ± 1.22, .95 Confidence Interval 1.51 ± 0.08
+STALKING Occurrences 154, Average 0.17 ± 0.38, .95 Confidence Interval 0.17 ± 0.02
+INTERFERENCE WITH PUBLIC OFFICER Occurrences 2047, Average 2.22 ± 1.63, .95 Confidence Interval 2.22 ± 0.11
+CRIMINAL TRESPASS Occurrences 11905, Average 12.94 ± 5.68, .95 Confidence Interval 12.94 ± 0.37
+GAMBLING Occurrences 1722, Average 1.87 ± 1.92, .95 Confidence Interval 1.87 ± 0.12
+OTHER OFFENSE Occurrences 16899, Average 18.37 ± 6.15, .95 Confidence Interval 18.37 ± 0.40
+OTHER NARCOTIC VIOLATION Occurrences 13, Average 0.01 ± 0.13, .95 Confidence Interval 0.01 ± 0.01
+CONCEALED CARRY LICENSE VIOLATION Occurrences 53, Average 0.06 ± 0.27, .95 Confidence Interval 0.06 ± 0.02
+PUBLIC PEACE VIOLATION Occurrences 4610, Average 5.01 ± 2.98, .95 Confidence Interval 5.01 ± 0.19
+NON-CRIMINAL Occurrences 12, Average 0.01 ± 0.11, .95 Confidence Interval 0.01 ± 0.01
+BURGLARY Occurrences 12784, Average 13.90 ± 6.78, .95 Confidence Interval 13.90 ± 0.44
+KIDNAPPING Occurrences 414, Average 0.45 ± 0.61, .95 Confidence Interval 0.45 ± 0.04
+
+
+Day Of Week,Type,Number,Ave,StdDev,ConfIntv
+Saturday,WEAPONS VIOLATION,8155,8.86,4.31,0.28
+Saturday,LIQUOR LAW VIOLATION,1518,1.65,1.52,0.10
+Saturday,NON - CRIMINAL,4,0.00,0.07,0.00
+Saturday,CRIM SEXUAL ASSAULT,1386,1.51,1.08,0.07
+Saturday,OFFENSE INVOLVING CHILDREN,1176,1.28,0.97,0.06
+Saturday,NARCOTICS,86062,93.55,44.37,2.87
+Saturday,PUBLIC INDECENCY,15,0.02,0.13,0.01
+Saturday,CRIMINAL DAMAGE,73422,79.81,26.85,1.74
+Saturday,RITUALISM,1,0.00,0.03,0.00
+Saturday,DECEPTIVE PRACTICE,11487,12.49,4.36,0.28
+Saturday,OBSCENITY,15,0.02,0.13,0.01
+Saturday,ASSAULT,30065,32.68,12.67,0.82
+Saturday,MOTOR VEHICLE THEFT,37927,41.22,14.74,0.95
+Saturday,ARSON,1099,1.19,0.96,0.06
+Saturday,THEFT,109716,119.26,33.32,2.15
+Saturday,INTIMIDATION,156,0.17,0.39,0.03
+Saturday,BATTERY,89995,97.82,39.89,2.58
+Saturday,HOMICIDE,1083,1.18,0.94,0.06
+Saturday,HUMAN TRAFFICKING,2,0.00,0.05,0.00
+Saturday,ROBBERY,32056,34.84,11.03,0.71
+Saturday,PROSTITUTION,7999,8.69,7.10,0.46
+Saturday,SEX OFFENSE,1390,1.51,1.22,0.08
+Saturday,STALKING,154,0.17,0.38,0.02
+Saturday,INTERFERENCE WITH PUBLIC OFFICER,2047,2.22,1.63,0.11
+Saturday,CRIMINAL TRESPASS,11905,12.94,5.68,0.37
+Saturday,GAMBLING,1722,1.87,1.92,0.12
+Saturday,OTHER OFFENSE,16899,18.37,6.15,0.40
+Saturday,OTHER NARCOTIC VIOLATION,13,0.01,0.13,0.01
+Saturday,CONCEALED CARRY LICENSE VIOLATION,53,0.06,0.27,0.02
+Saturday,PUBLIC PEACE VIOLATION,4610,5.01,2.98,0.19
+Saturday,NON-CRIMINAL,12,0.01,0.11,0.01
+Saturday,BURGLARY,12784,13.90,6.78,0.44
+Saturday,KIDNAPPING,414,0.45,0.61,0.04
+
+

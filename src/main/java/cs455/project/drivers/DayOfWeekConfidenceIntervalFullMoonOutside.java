@@ -24,13 +24,13 @@ public class DayOfWeekConfidenceIntervalFullMoonOutside extends DayOfWeekConfide
    }
 
    void run() {
-      //SparkConf conf = new SparkConf().setAppName("Day Of Week Confidence Interval Application With Full Moon Outside");
-      SparkConf conf = new SparkConf().setMaster("local").setAppName("Day Of Week Confidence Interval Application With Full Moon Outside");
+      SparkConf conf = new SparkConf().setAppName("Day Of Week Confidence Interval Application With Full Moon Outside");
+      //SparkConf conf = new SparkConf().setMaster("local").setAppName("Day Of Week Confidence Interval Application With Full Moon Outside");
 
       JavaSparkContext sc = new JavaSparkContext(conf);
 
-      //JavaRDD<String> textFile = sc.textFile(Constants.HDFS_MOONS_DIR);
-      JavaRDD<String> textFile = sc.textFile("/Users/mmuller/Downloads/moons/moon-phases-*.csv");
+      JavaRDD<String> textFile = sc.textFile(Constants.HDFS_MOONS_DIR);
+      //JavaRDD<String> textFile = sc.textFile("/Users/mmuller/Downloads/moons/moon-phases-*.csv");
 
       List<LocalDate> fullMoonDates = textFile.filter(MoonsHelper::isValidEntry).map(Utils::splitCommaDelimitedString).filter(DayOfWeekConfidenceIntervalNotFullMoon::isFullMoon).map(DayOfWeekConfidenceIntervalNotFullMoon::getDate).filter(Objects::nonNull).collect();
 
@@ -40,8 +40,8 @@ public class DayOfWeekConfidenceIntervalFullMoonOutside extends DayOfWeekConfide
       List<String> outdoorLocations = Stream.of(CrimesHelper.OUTDOOR_LOCATIONS).collect(Collectors.toList());
       Broadcast<List<String>> outdoorLocationsBroadcast = sc.broadcast(outdoorLocations);
 
-      //textFile = sc.textFile(Constants.HDFS_CRIMES_DIR);
-      textFile = sc.textFile("/Users/mmuller/Downloads/chicagoCrimes2001ToPresent.csv");
+      textFile = sc.textFile(Constants.HDFS_CRIMES_DIR);
+      //textFile = sc.textFile("/Users/mmuller/Downloads/chicagoCrimes2001ToPresent.csv");
 
       JavaRDD<String[]> fil = textFile.filter(CrimesHelper::isValidEntry)
             .map(Utils::splitCommaDelimitedString)
@@ -63,7 +63,7 @@ public class DayOfWeekConfidenceIntervalFullMoonOutside extends DayOfWeekConfide
       List<String> writeMe = new ArrayList<>();
       writeMe.add("Day of Week Crime .95 Confidence Interval Full Moon Outside");
       writeMe.add("===========================================");
-      writeMe.add("These are full moon days.  If Their Crime Level Averages are outside of Confidence Interval it's Abnormal");
+      writeMe.add("These are Outside full moon days.  If Their Crime Level Averages are outside of Confidence Interval it's Abnormal");
       writeMe.add("------------------------------------------------------------------------");
 
       for (String s : Constants.DAYS_OF_WEEK) {
