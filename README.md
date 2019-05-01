@@ -1,5 +1,12 @@
-# CS 455 Term Project
+# Lunar Lunacy and the Chicago Criminal Element
 CS 455 Term Project
+
+Authors: Scott Axcell, Daniel Kielman, Matt Muller
+## Build and Run
+```
+gradle assemble
+./runme.sh
+```
 
 ## Setup and Running Spark Drivers
 ### Setup
